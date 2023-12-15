@@ -21,8 +21,8 @@ Procedure CerrarArchInfracciones(var ARCH:T_ArchInfractores);
 
 implementation
 
-  Procedure CrarArchInfracciones(var ARCH:T_ArchInfractores);
-    begin
+Procedure CrarArchInfracciones(var ARCH:T_ArchInfractores);
+  begin
       Assign(ARCH, rutaInfracciones);
       Rewrite(ARCH);
     end;
@@ -63,7 +63,7 @@ implementation
   Procedure ModificarInfraccion(var ARCH:T_ArchInfractores; pos:integer);
   begin
      Seek(ARCH, pos);
-     Write(ARCH, ActualizarInfraccion(LeerInfraccion(ARCH, pos)););
+     Write(ARCH, ActualizarInfraccion(LeerInfraccion(ARCH, pos)));
   end;
 
 end.

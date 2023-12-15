@@ -8,52 +8,16 @@
       <Unit>
         <Filename Value="project1.lpr"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <CursorPos X="21" Y="2"/>
-        <UsageCount Value="34"/>
+        <UsageCount Value="37"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="conductores.pas"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="Conductores"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="2" Y="3"/>
-        <UsageCount Value="34"/>
-      </Unit>
-      <Unit>
-        <Filename Value="infracciones.pas"/>
-        <IsPartOfProject Value="True"/>
-        <UnitName Value="Infracciones"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="16" Y="10"/>
-        <UsageCount Value="34"/>
-      </Unit>
-      <Unit>
-        <Filename Value="tipos.pas"/>
-        <IsPartOfProject Value="True"/>
-        <UnitName Value="Tipos"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="21" Y="8"/>
-        <UsageCount Value="34"/>
-      </Unit>
-      <Unit>
-        <Filename Value="arbol.pas"/>
-        <IsPartOfProject Value="True"/>
-        <UnitName Value="Arbol"/>
-        <EditorIndex Value="4"/>
-        <CursorPos X="10" Y="3"/>
-        <UsageCount Value="34"/>
-        <Loaded Value="True"/>
-      </Unit>
-      <Unit>
-        <Filename Value="conductores.pas"/>
-        <IsPartOfProject Value="True"/>
-        <UnitName Value="Conductores"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="14"/>
-        <CursorPos X="39" Y="19"/>
-        <UsageCount Value="33"/>
+        <CursorPos X="43" Y="30"/>
+        <UsageCount Value="36"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -61,8 +25,26 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="Infracciones"/>
         <EditorIndex Value="2"/>
-        <CursorPos X="21"/>
-        <UsageCount Value="33"/>
+        <CursorPos X="26" Y="54"/>
+        <UsageCount Value="36"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="tipos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Tipos"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="21" Y="8"/>
+        <UsageCount Value="37"/>
+      </Unit>
+      <Unit>
+        <Filename Value="arbol.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Arbol"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="4"/>
+        <CursorPos X="59" Y="8"/>
+        <UsageCount Value="37"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -70,12 +52,12 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="Menu"/>
         <EditorIndex Value="1"/>
-        <CursorPos X="22" Y="8"/>
-        <UsageCount Value="28"/>
+        <CursorPos X="46" Y="8"/>
+        <UsageCount Value="31"/>
         <Loaded Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="27">
+    <JumpHistory HistoryIndex="28">
       <Position>
         <Filename Value="project1.lpr"/>
         <Caret Line="6" Column="38"/>
@@ -187,6 +169,10 @@
       <Position>
         <Filename Value="infracciones.pas"/>
         <Caret Line="63" Column="74" TopLine="31"/>
+      </Position>
+      <Position>
+        <Filename Value="infracciones.pas"/>
+        <Caret Line="53" Column="27"/>
       </Position>
     </JumpHistory>
     <RunParams>

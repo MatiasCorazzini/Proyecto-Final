@@ -21,8 +21,8 @@ Procedure CerrarArchInfracciones(var ARCH:T_ArchInfractores);
 
 implementation
 
-  Procedure CrarArchInfracciones(var ARCH:T_ArchInfractores);
-    begin
+Procedure CrarArchInfracciones(var ARCH:T_ArchInfractores);
+  begin
       Assign(ARCH, rutaInfracciones);
       Rewrite(ARCH);
     end;

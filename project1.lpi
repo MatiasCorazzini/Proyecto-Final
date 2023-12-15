@@ -32,7 +32,6 @@
       <Unit>
         <Filename Value="conductores.pas"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="Conductores"/>
       </Unit>
       <Unit>
         <Filename Value="infracciones.pas"/>
@@ -48,16 +47,6 @@
         <Filename Value="arbol.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Arbol"/>
-      </Unit>
-      <Unit>
-        <Filename Value="conductores.pas"/>
-        <IsPartOfProject Value="True"/>
-        <UnitName Value="Conductores"/>
-      </Unit>
-      <Unit>
-        <Filename Value="infracciones.pas"/>
-        <IsPartOfProject Value="True"/>
-        <UnitName Value="Infracciones"/>
       </Unit>
       <Unit>
         <Filename Value="menu.pas"/>

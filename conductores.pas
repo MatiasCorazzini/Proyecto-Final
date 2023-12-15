@@ -8,7 +8,7 @@ rutacond = 'C:\Users\oliv\Desktop\TPfinal';
 //declaracion de archivo
 type
 t_dato_cond = record
-     DNI:string[10];
+     DNI:integer;
      AYN:string[25]; //Apellido y nombre
      FN:string[20]; //Fecha nacimiento
      telefono:string[20];
@@ -40,7 +40,7 @@ x:t_dato_cond;
 begin
 seek(pos);
 read(arch_cond,x);
-x.DNI:='';
+x.DNI:=0;
 x.AYN:='';
 x.FN:='';
 x.telefono:='';
@@ -49,10 +49,11 @@ x.scoring:=0;
 x.Habilitado:='';
 x.FH:='';
 x.CR:='';
-x.activo:=false
+x.activo:=false;
 end;
 
-Procedure altaconduc(var arch_cond:t_arch_cond; var x:t_dato_cond);
+Procedure altaconduc(var arch_cond:t_arch_cond);
+var x:t_dato_cond;
 begin
 Seek(arch_cond, Filesize(arch_cond));
 write(arch_cond,x.DNI);
@@ -137,6 +138,7 @@ end;
 end;
 
 procedure consultaconduc (var arch_cond:t_arch_cond; var pos:integer);
+begin
 seek(pos);
 read(arch_cond,x);
 writeln('DNI: ',x.DNI);
@@ -147,6 +149,7 @@ writeln('gmail: ',x.mail);
 writeln('habilitado: ',x.habilitado);
 writeln('fecha habilitacion: ',x.FH);
 writeln('cantidad reincidencias: ',x.CR);
+end;
 end.
 
 
