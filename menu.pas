@@ -9,7 +9,7 @@ uses
  Classes, SysUtils;
 
 implementation
-menu()
+procedure menu()
 var
 op:integer;
 op_conduc:integer;

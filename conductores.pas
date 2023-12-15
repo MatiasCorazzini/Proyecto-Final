@@ -8,13 +8,8 @@ const
 rutacond = 'C:\conductores.dat';
 //declaracion de archivo
 type
-<<<<<<< HEAD
-t_dato_cond = record
-     DNI:integer;
-=======
   T_Conductores = Record
      DNI:string[10];
->>>>>>> 0211b9842443072f5c61043473c5c015134737f5
      AYN:string[25]; //Apellido y nombre
      FN:string[20]; //Fecha nacimiento
      telefono:string[20];
@@ -32,46 +27,7 @@ t_dato_cond = record
 implementation
 procedure bajaconduc(var arch_cond:T_ArchConductores; pos:integer);
 var
-<<<<<<< HEAD
-x:t_dato_cond;
-begin
-seek(pos);
-read(arch_cond,x);
-x.DNI:=0;
-x.AYN:='';
-x.FN:='';
-x.telefono:='';
-x.mail:='':
-x.scoring:=0;
-x.Habilitado:='';
-x.FH:='';
-x.CR:='';
-x.activo:=false;
-end;
-
-Procedure altaconduc(var arch_cond:t_arch_cond);
-var x:t_dato_cond;
-begin
-Seek(arch_cond, Filesize(arch_cond));
-write(arch_cond,x.DNI);
-write(arch_cond,x.AYN);
-write(arch_cond,x.FN);
-write(arch_cond,x.telefono);
-write(arch_cond,x.mail);
-write(arch_cond,x.scoring:=0);
-write(arch_cond,x.habilitado:='si');
-write(arch_cond,x.FH);
-write(arch_cond,x.CR);
-write(arch_cond,x.activo:=activo);
-end;
-
-procedure modificarconduc(var arch_cond:t_arch_cond; var pos:byte);
-var
- x:t_dato_cond;
- opcion:integer;
-=======
 x:T_Conductores;
->>>>>>> 0211b9842443072f5c61043473c5c015134737f5
 begin
 Seek(arch_cond,pos);
 read(arch_cond,x);
@@ -185,23 +141,6 @@ begin
   writeln('fecha habilitacion: ',x.FH);
   writeln('cantidad reincidencias: ',x.CR);
 end;
-
-<<<<<<< HEAD
-procedure consultaconduc (var arch_cond:t_arch_cond; var pos:integer);
-begin
-seek(pos);
-read(arch_cond,x);
-writeln('DNI: ',x.DNI);
-writeln('Apellido y Nombre: ',x.AYN);
-writeln('Fecha de naciimiento: ',x.FN);
-writeln('telefono: ',x.telefono);
-writeln('gmail: ',x.mail);
-writeln('habilitado: ',x.habilitado);
-writeln('fecha habilitacion: ',x.FH);
-writeln('cantidad reincidencias: ',x.CR);
-end;
-=======
->>>>>>> 0211b9842443072f5c61043473c5c015134737f5
 end.
 
 

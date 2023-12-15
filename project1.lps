@@ -8,40 +8,28 @@
       <Unit>
         <Filename Value="project1.lpr"/>
         <IsPartOfProject Value="True"/>
-<<<<<<< HEAD
-        <CursorPos X="21" Y="2"/>
-=======
         <CursorPos X="6" Y="11"/>
->>>>>>> 0211b9842443072f5c61043473c5c015134737f5
-        <UsageCount Value="37"/>
+        <UsageCount Value="38"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="conductores.pas"/>
         <IsPartOfProject Value="True"/>
-<<<<<<< HEAD
-        <EditorIndex Value="3"/>
-        <CursorPos X="43" Y="30"/>
-=======
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <CursorPos Y="25"/>
->>>>>>> 0211b9842443072f5c61043473c5c015134737f5
-        <UsageCount Value="36"/>
+        <TopLine Value="114"/>
+        <CursorPos X="5" Y="143"/>
+        <UsageCount Value="37"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="infracciones.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Infracciones"/>
-<<<<<<< HEAD
-        <EditorIndex Value="2"/>
-        <CursorPos X="26" Y="54"/>
-=======
         <EditorIndex Value="3"/>
+        <TopLine Value="16"/>
         <CursorPos X="62" Y="13"/>
->>>>>>> 0211b9842443072f5c61043473c5c015134737f5
-        <UsageCount Value="36"/>
+        <UsageCount Value="37"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -50,21 +38,15 @@
         <UnitName Value="Tipos"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="21" Y="8"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="38"/>
       </Unit>
       <Unit>
         <Filename Value="arbol.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Arbol"/>
-<<<<<<< HEAD
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="4"/>
-        <CursorPos X="59" Y="8"/>
-=======
         <EditorIndex Value="4"/>
         <CursorPos X="10" Y="3"/>
->>>>>>> 0211b9842443072f5c61043473c5c015134737f5
-        <UsageCount Value="37"/>
+        <UsageCount Value="38"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -72,12 +54,8 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="Menu"/>
         <EditorIndex Value="1"/>
-<<<<<<< HEAD
-        <CursorPos X="46" Y="8"/>
-=======
         <CursorPos X="36" Y="13"/>
->>>>>>> 0211b9842443072f5c61043473c5c015134737f5
-        <UsageCount Value="31"/>
+        <UsageCount Value="32"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -94,83 +72,7 @@
         <UsageCount Value="10"/>
       </Unit>
     </Units>
-<<<<<<< HEAD
-    <JumpHistory HistoryIndex="28">
-      <Position>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="6" Column="38"/>
-      </Position>
-      <Position>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="9" Column="46"/>
-      </Position>
-      <Position>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="19" Column="62" TopLine="7"/>
-      </Position>
-      <Position>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="9" Column="44"/>
-      </Position>
-      <Position>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="16" Column="18"/>
-      </Position>
-      <Position>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="19" Column="25" TopLine="10"/>
-      </Position>
-      <Position>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="38" Column="2" TopLine="10"/>
-      </Position>
-      <Position>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="39" Column="45" TopLine="10"/>
-      </Position>
-      <Position>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="38" Column="44" TopLine="10"/>
-      </Position>
-      <Position>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="34" Column="65" TopLine="10"/>
-      </Position>
-      <Position>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="42" Column="15" TopLine="10"/>
-      </Position>
-      <Position>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="2"/>
-      </Position>
-      <Position>
-        <Filename Value="infracciones.pas"/>
-        <Caret Line="32" Column="33"/>
-      </Position>
-      <Position>
-        <Filename Value="infracciones.pas"/>
-        <Caret Line="17" Column="46"/>
-      </Position>
-      <Position>
-        <Filename Value="infracciones.pas"/>
-        <Caret Column="3"/>
-      </Position>
-      <Position>
-        <Filename Value="infracciones.pas"/>
-        <Caret Line="20" Column="62"/>
-      </Position>
-      <Position>
-        <Filename Value="infracciones.pas"/>
-        <Caret Line="15" Column="54"/>
-      </Position>
-      <Position>
-        <Filename Value="infracciones.pas"/>
-        <Caret Line="35" Column="25" TopLine="2"/>
-      </Position>
-=======
     <JumpHistory HistoryIndex="29">
->>>>>>> 0211b9842443072f5c61043473c5c015134737f5
       <Position>
         <Filename Value="infracciones.pas"/>
         <Caret Line="26" Column="37" TopLine="5"/>
@@ -212,10 +114,6 @@
         <Caret Line="63" Column="74" TopLine="31"/>
       </Position>
       <Position>
-<<<<<<< HEAD
-        <Filename Value="infracciones.pas"/>
-        <Caret Line="53" Column="27"/>
-=======
         <Filename Value="conductores.pas"/>
         <Caret Line="122" Column="72" TopLine="104"/>
       </Position>
@@ -294,7 +192,6 @@
       <Position>
         <Filename Value="conductores.pas"/>
         <Caret Line="34" Column="7"/>
->>>>>>> 0211b9842443072f5c61043473c5c015134737f5
       </Position>
     </JumpHistory>
     <RunParams>
