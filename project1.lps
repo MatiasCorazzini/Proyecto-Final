@@ -9,18 +9,16 @@
         <Filename Value="project1.lpr"/>
         <IsPartOfProject Value="True"/>
         <CursorPos X="6" Y="11"/>
-        <UsageCount Value="36"/>
+        <UsageCount Value="37"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="conductores.pas"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="Conductores"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="115"/>
-        <CursorPos X="16" Y="10"/>
-        <UsageCount Value="35"/>
+        <CursorPos Y="25"/>
+        <UsageCount Value="36"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -29,7 +27,7 @@
         <UnitName Value="Infracciones"/>
         <EditorIndex Value="3"/>
         <CursorPos X="62" Y="13"/>
-        <UsageCount Value="35"/>
+        <UsageCount Value="36"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -38,7 +36,7 @@
         <UnitName Value="Tipos"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="21" Y="8"/>
-        <UsageCount Value="36"/>
+        <UsageCount Value="37"/>
       </Unit>
       <Unit>
         <Filename Value="arbol.pas"/>
@@ -46,7 +44,7 @@
         <UnitName Value="Arbol"/>
         <EditorIndex Value="4"/>
         <CursorPos X="10" Y="3"/>
-        <UsageCount Value="36"/>
+        <UsageCount Value="37"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -54,8 +52,8 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="Menu"/>
         <EditorIndex Value="1"/>
-        <CursorPos X="20" Y="8"/>
-        <UsageCount Value="30"/>
+        <CursorPos X="36" Y="13"/>
+        <UsageCount Value="31"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -73,54 +71,6 @@
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="38" Column="2" TopLine="10"/>
-      </Position>
-      <Position>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="39" Column="45" TopLine="10"/>
-      </Position>
-      <Position>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="38" Column="44" TopLine="10"/>
-      </Position>
-      <Position>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="34" Column="65" TopLine="10"/>
-      </Position>
-      <Position>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="42" Column="15" TopLine="10"/>
-      </Position>
-      <Position>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="2"/>
-      </Position>
-      <Position>
-        <Filename Value="infracciones.pas"/>
-        <Caret Line="32" Column="33"/>
-      </Position>
-      <Position>
-        <Filename Value="infracciones.pas"/>
-        <Caret Line="17" Column="46"/>
-      </Position>
-      <Position>
-        <Filename Value="infracciones.pas"/>
-        <Caret Column="3"/>
-      </Position>
-      <Position>
-        <Filename Value="infracciones.pas"/>
-        <Caret Line="20" Column="62"/>
-      </Position>
-      <Position>
-        <Filename Value="infracciones.pas"/>
-        <Caret Line="15" Column="54"/>
-      </Position>
-      <Position>
-        <Filename Value="infracciones.pas"/>
-        <Caret Line="35" Column="25" TopLine="2"/>
-      </Position>
       <Position>
         <Filename Value="infracciones.pas"/>
         <Caret Line="26" Column="37" TopLine="5"/>
@@ -192,6 +142,54 @@
       <Position>
         <Filename Value="conductores.pas"/>
         <Caret Line="20" Column="45"/>
+      </Position>
+      <Position>
+        <Filename Value="conductores.pas"/>
+        <Caret Line="152" TopLine="119"/>
+      </Position>
+      <Position>
+        <Filename Value="conductores.pas"/>
+        <Caret Line="3" Column="4"/>
+      </Position>
+      <Position>
+        <Filename Value="conductores.pas"/>
+        <Caret Line="10"/>
+      </Position>
+      <Position>
+        <Filename Value="conductores.pas"/>
+        <Caret Line="32" Column="31"/>
+      </Position>
+      <Position>
+        <Filename Value="conductores.pas"/>
+        <Caret Line="2"/>
+      </Position>
+      <Position>
+        <Filename Value="conductores.pas"/>
+        <Caret Line="8" Column="33"/>
+      </Position>
+      <Position>
+        <Filename Value="conductores.pas"/>
+        <Caret Line="4" Column="11"/>
+      </Position>
+      <Position>
+        <Filename Value="conductores.pas"/>
+        <Caret Line="10" Column="43"/>
+      </Position>
+      <Position>
+        <Filename Value="conductores.pas"/>
+        <Caret Line="5" Column="29"/>
+      </Position>
+      <Position>
+        <Filename Value="conductores.pas"/>
+        <Caret Line="13" Column="36"/>
+      </Position>
+      <Position>
+        <Filename Value="conductores.pas"/>
+        <Caret Line="10" Column="82"/>
+      </Position>
+      <Position>
+        <Filename Value="conductores.pas"/>
+        <Caret Line="34" Column="7"/>
       </Position>
     </JumpHistory>
     <RunParams>

@@ -1,14 +1,15 @@
-unit Conductores;
+unit conductores;
 
 interface
 
-const
-MAX_POINTS = 20;
-rutaConductores = 'c:\conductores.dat';
+uses crt;
 
+const
+rutacond = 'C:\conductores.dat';
+//declaracion de archivo
 type
   T_Conductores = Record
-    DNI:string[10];
+     DNI:string[10];
      AYN:string[25]; //Apellido y nombre
      FN:string[20]; //Fecha nacimiento
      telefono:string[20];
@@ -20,32 +21,11 @@ type
      activo:boolean; //campo de verificacion
   end;
 
-  T_ArchConductores = File Of T_Conductores;
+  T_ArchConductores = File of T_Conductores;
 
-Procedure CrarArchConductores(var ARCH:T_ArchConductores);
-Procedure AbrirArchConductores(var ARCH:T_ArchConductores);
-Procedure CerrarArchConductores(var ARCH:T_ArchConductores);
-
-Implementation
-
-Procedure CrarArchConductores(var ARCH:T_ArchConductores);
-  begin
-    Assign(ARCH,rutaConductores);
-    Rewrite(ARCH);
-  end;
-
-Procedure AbrirArchConductores(var ARCH:T_ArchConductores);
-  begin
-    Assign(ARCH,rutaConductores);
-    Reset(ARCH);
-  end;
-
-Procedure CerrarArchConductores(var ARCH:T_ArchConductores);
-  begin
-    Close(ARCH);
-  end;
-
-procedure bajaconduc(var arch_cond:T_ArchConductores; var pos:integer);
+//procedimientos
+implementation
+procedure bajaconduc(var arch_cond:T_ArchConductores; pos:integer);
 var
 x:T_Conductores;
 begin
@@ -55,7 +35,7 @@ x.activo:=false;
 write(arch_cond,x);
 end;
 
-Procedure altaconduc(var arch_cond:T_ArchConductores; var x:T_Conductores);
+Procedure altaconduc(var arch_cond:T_ArchConductores; x:T_Conductores);
 var
 i:byte;
 pos:byte;
@@ -163,4 +143,9 @@ begin
 end;
 
 end.
+
+
+                     
+
+
 

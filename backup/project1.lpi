@@ -32,7 +32,6 @@
       <Unit>
         <Filename Value="conductores.pas"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="Conductores"/>
       </Unit>
       <Unit>
         <Filename Value="infracciones.pas"/>
