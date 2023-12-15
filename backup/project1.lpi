@@ -50,14 +50,9 @@
         <UnitName Value="Arbol"/>
       </Unit>
       <Unit>
-        <Filename Value="conductores.pas"/>
+        <Filename Value="menu.pas"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="Conductores"/>
-      </Unit>
-      <Unit>
-        <Filename Value="infracciones.pas"/>
-        <IsPartOfProject Value="True"/>
-        <UnitName Value="Infracciones"/>
+        <UnitName Value="Menu"/>
       </Unit>
     </Units>
   </ProjectOptions>

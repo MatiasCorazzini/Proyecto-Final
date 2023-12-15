@@ -63,7 +63,7 @@ implementation
   Procedure ModificarInfraccion(var ARCH:T_ArchInfractores; pos:integer);
   begin
      Seek(ARCH, pos);
-     Write(ARCH, ActualizarInfraccion(LeerInfraccion(ARCH, pos)););
+     Write(ARCH, ActualizarInfraccion(LeerInfraccion(ARCH, pos)));
   end;
 
 end.

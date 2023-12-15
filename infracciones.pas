@@ -65,6 +65,5 @@ implementation
      Seek(ARCH, pos);
      Write(ARCH, ActualizarInfraccion(LeerInfraccion(ARCH, pos)));
   end;
-
 end.
 
