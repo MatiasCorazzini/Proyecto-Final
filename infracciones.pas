@@ -65,6 +65,5 @@ Procedure CrarArchInfracciones(var ARCH:T_ArchInfractores);
      Seek(ARCH, pos);
      Write(ARCH, ActualizarInfraccion(LeerInfraccion(ARCH, pos)));
   end;
-
 end.
 
