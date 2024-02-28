@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="12"/>
+    <PathDelim Value="\"/>
+    <General>
+      <Flags>
+        <MainUnitHasCreateFormStatements Value="False"/>
+        <MainUnitHasTitleStatement Value="False"/>
+        <MainUnitHasScaledStatement Value="False"/>
+      </Flags>
+      <SessionStorage Value="InProjectDir"/>
+      <Title Value="project1"/>
+      <UseAppBundle Value="False"/>
+      <ResourceType Value="res"/>
+    </General>
+    <BuildModes>
+      <Item Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+    <RunParams>
+      <FormatVersion Value="2"/>
+    </RunParams>
+    <Units>
+      <Unit>
+        <Filename Value="project1.lpr"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="conductores.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Conductores"/>
+      </Unit>
+      <Unit>
+        <Filename Value="infracciones.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Infracciones"/>
+      </Unit>
+      <Unit>
+        <Filename Value="tipos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Tipos"/>
+      </Unit>
+      <Unit>
+        <Filename Value="arbol.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ArbolConductores"/>
+      </Unit>
+      <Unit>
+        <Filename Value="menu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Menu"/>
+      </Unit>
+      <Unit>
+        <Filename Value="arch_conductores.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Arch_Conductores"/>
+      </Unit>
+      <Unit>
+        <Filename Value="arch_infracciones.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Arch_Infracciones"/>
+      </Unit>
+      <Unit>
+        <Filename Value="arbolconductores.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ArbolConductores"/>
+      </Unit>
+      <Unit>
+        <Filename Value="arbolinfracciones.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ArbolInfracciones"/>
+      </Unit>
+      <Unit>
+        <Filename Value="scoring.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Scoring"/>
+      </Unit>
+      <Unit>
+        <Filename Value="lista_conductores.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Lista_Conductores"/>
+      </Unit>
+      <Unit>
+        <Filename Value="lista_infracciones.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Lista_Infracciones"/>
+      </Unit>
+      <Unit>
+        <Filename Value="validadores.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Validadores"/>
+      </Unit>
+      <Unit>
+        <Filename Value="estadisticas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Estadisticas"/>
+      </Unit>
+      <Unit>
+        <Filename Value="estilo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Estilo"/>
+      </Unit>
+      <Unit>
+        <Filename Value="menu_estadistica.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Menu_Estadistica"/>
+      </Unit>
+      <Unit>
+        <Filename Value="menu_listados.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Menu_Listados"/>
+      </Unit>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="project1"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Linking>
+      <Debugging>
+        <DebugInfoType Value="dsDwarf2Set"/>
+      </Debugging>
+    </Linking>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions>
+      <Item>
+        <Name Value="EAbort"/>
+      </Item>
+      <Item>
+        <Name Value="ECodetoolError"/>
+      </Item>
+      <Item>
+        <Name Value="EFOpenError"/>
+      </Item>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

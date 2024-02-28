@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="project1.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <CursorPos X="7" Y="23"/>
+        <UsageCount Value="159"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="conductores.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Conductores"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="197"/>
+        <CursorPos X="11" Y="199"/>
+        <UsageCount Value="158"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="infracciones.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Infracciones"/>
+        <EditorIndex Value="9"/>
+        <TopLine Value="140"/>
+        <CursorPos X="17" Y="174"/>
+        <UsageCount Value="158"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="tipos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Tipos"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="21" Y="8"/>
+        <UsageCount Value="159"/>
+      </Unit>
+      <Unit>
+        <Filename Value="arbol.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ArbolConductores"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="38"/>
+        <UsageCount Value="159"/>
+      </Unit>
+      <Unit>
+        <Filename Value="menu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Menu"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="14"/>
+        <CursorPos X="27" Y="11"/>
+        <UsageCount Value="153"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="arch_conductores.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Arch_Conductores"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="16"/>
+        <CursorPos X="32" Y="28"/>
+        <FoldState Value=" T3i325311 PJY2r"/>
+        <UsageCount Value="141"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="arch_infracciones.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Arch_Infracciones"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="3"/>
+        <CursorPos X="27" Y="12"/>
+        <UsageCount Value="141"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="arbolconductores.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ArbolConductores"/>
+        <EditorIndex Value="13"/>
+        <TopLine Value="38"/>
+        <CursorPos X="13" Y="14"/>
+        <UsageCount Value="133"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="arbolinfracciones.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ArbolInfracciones"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="45"/>
+        <CursorPos X="14" Y="45"/>
+        <UsageCount Value="133"/>
+      </Unit>
+      <Unit>
+        <Filename Value="scoring.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Scoring"/>
+        <EditorIndex Value="12"/>
+        <TopLine Value="44"/>
+        <CursorPos X="36" Y="131"/>
+        <UsageCount Value="126"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="lista_conductores.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Lista_Conductores"/>
+        <EditorIndex Value="10"/>
+        <TopLine Value="164"/>
+        <CursorPos X="100" Y="182"/>
+        <UsageCount Value="92"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="lista_infracciones.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Lista_Infracciones"/>
+        <EditorIndex Value="11"/>
+        <TopLine Value="207"/>
+        <CursorPos X="42" Y="218"/>
+        <UsageCount Value="89"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="validadores.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Validadores"/>
+        <EditorIndex Value="14"/>
+        <TopLine Value="17"/>
+        <CursorPos X="8" Y="26"/>
+        <UsageCount Value="82"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="estadisticas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Estadisticas"/>
+        <EditorIndex Value="15"/>
+        <TopLine Value="149"/>
+        <CursorPos X="33" Y="189"/>
+        <UsageCount Value="72"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="estilo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Estilo"/>
+        <EditorIndex Value="16"/>
+        <CursorPos X="24" Y="21"/>
+        <UsageCount Value="63"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="menu_estadistica.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Menu_Estadistica"/>
+        <EditorIndex Value="5"/>
+        <CursorPos X="67" Y="23"/>
+        <UsageCount Value="60"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="menu_listados.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Menu_Listados"/>
+        <EditorIndex Value="4"/>
+        <CursorPos X="23" Y="45"/>
+        <UsageCount Value="55"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\Downloads\TP final\infracciones.pas"/>
+        <UnitName Value="Infracciones"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\Downloads\TP final\conductores.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="37"/>
+        <CursorPos X="5" Y="67"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="menu_conductores.pas"/>
+        <UnitName Value="Menu_Conductores"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="56"/>
+        <CursorPos X="32" Y="27"/>
+        <UsageCount Value="62"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="menu_infracciones.pas"/>
+        <UnitName Value="Menu_Infracciones"/>
+        <EditorIndex Value="3"/>
+        <CursorPos X="23" Y="32"/>
+        <UsageCount Value="62"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\MÚSICA\Musica Ema\Downloads\unit_validar.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="121" Y="12"/>
+        <UsageCount Value="5"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\Mis documentos\UTN - FRCU (MAti)\1er Año\Algoritmos y Est de Datos\ejem proyecto final\unit_estadisticas.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="29"/>
+        <UsageCount Value="6"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\AppData\Local\Temp\Rar$DIa8592.16990\unit1.pas"/>
+        <UnitName Value="Unit1"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="23"/>
+        <CursorPos X="125" Y="25"/>
+        <UsageCount Value="6"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="29">
+      <Position>
+        <Filename Value="lista_infracciones.pas"/>
+        <Caret Line="255" Column="8" TopLine="218"/>
+      </Position>
+      <Position>
+        <Filename Value="lista_infracciones.pas"/>
+        <Caret Line="245" Column="24" TopLine="226"/>
+      </Position>
+      <Position>
+        <Filename Value="lista_infracciones.pas"/>
+        <Caret Line="251" Column="36" TopLine="226"/>
+      </Position>
+      <Position>
+        <Filename Value="lista_infracciones.pas"/>
+        <Caret Line="297" Column="55" TopLine="264"/>
+      </Position>
+      <Position>
+        <Filename Value="lista_infracciones.pas"/>
+        <Caret Line="155" Column="48" TopLine="135"/>
+      </Position>
+      <Position>
+        <Filename Value="lista_infracciones.pas"/>
+        <Caret Line="279" Column="110" TopLine="258"/>
+      </Position>
+      <Position>
+        <Filename Value="lista_infracciones.pas"/>
+        <Caret Line="289" Column="22" TopLine="262"/>
+      </Position>
+      <Position>
+        <Filename Value="lista_infracciones.pas"/>
+        <Caret Line="295" Column="48" TopLine="264"/>
+      </Position>
+      <Position>
+        <Filename Value="lista_infracciones.pas"/>
+        <Caret Line="291" Column="34" TopLine="265"/>
+      </Position>
+      <Position>
+        <Filename Value="lista_conductores.pas"/>
+        <Caret Line="182" Column="104" TopLine="158"/>
+      </Position>
+      <Position>
+        <Filename Value="lista_conductores.pas"/>
+        <Caret Line="192" Column="33" TopLine="169"/>
+      </Position>
+      <Position>
+        <Filename Value="lista_infracciones.pas"/>
+        <Caret Line="235" Column="142" TopLine="209"/>
+      </Position>
+      <Position>
+        <Filename Value="estadisticas.pas"/>
+        <Caret Line="23" Column="42" TopLine="23"/>
+      </Position>
+      <Position>
+        <Filename Value="conductores.pas"/>
+        <Caret Line="70" Column="41" TopLine="64"/>
+      </Position>
+      <Position>
+        <Filename Value="conductores.pas"/>
+        <Caret Column="7"/>
+      </Position>
+      <Position>
+        <Filename Value="menu_conductores.pas"/>
+        <Caret Line="48" Column="10" TopLine="20"/>
+      </Position>
+      <Position>
+        <Filename Value="scoring.pas"/>
+        <Caret Line="122" Column="48" TopLine="93"/>
+      </Position>
+      <Position>
+        <Filename Value="scoring.pas"/>
+        <Caret Line="46" Column="22" TopLine="24"/>
+      </Position>
+      <Position>
+        <Filename Value="scoring.pas"/>
+        <Caret Line="8" Column="16"/>
+      </Position>
+      <Position>
+        <Filename Value="scoring.pas"/>
+        <Caret Line="53" Column="12" TopLine="32"/>
+      </Position>
+      <Position>
+        <Filename Value="scoring.pas"/>
+        <Caret Line="8" Column="22"/>
+      </Position>
+      <Position>
+        <Filename Value="scoring.pas"/>
+        <Caret Line="137" Column="18" TopLine="105"/>
+      </Position>
+      <Position>
+        <Filename Value="menu_conductores.pas"/>
+        <Caret Line="100" Column="18" TopLine="67"/>
+      </Position>
+      <Position>
+        <Filename Value="menu_conductores.pas"/>
+        <Caret Line="113" Column="2" TopLine="69"/>
+      </Position>
+      <Position>
+        <Filename Value="menu_conductores.pas"/>
+        <Caret Line="90" Column="32" TopLine="69"/>
+      </Position>
+      <Position>
+        <Filename Value="menu_conductores.pas"/>
+        <Caret Line="96" Column="40" TopLine="73"/>
+      </Position>
+      <Position>
+        <Filename Value="menu_conductores.pas"/>
+        <Caret Line="75" Column="22" TopLine="29"/>
+      </Position>
+      <Position>
+        <Filename Value="menu_conductores.pas"/>
+        <Caret Line="5" Column="109"/>
+      </Position>
+      <Position>
+        <Filename Value="menu_conductores.pas"/>
+        <Caret Line="71" Column="12" TopLine="53"/>
+      </Position>
+      <Position>
+        <Filename Value="scoring.pas"/>
+        <Caret Line="17" Column="8"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>
