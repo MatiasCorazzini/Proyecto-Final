@@ -3,13 +3,12 @@ unit ArbolConductores;
 interface
 
 uses
-  SysUtils, crt, Arch_Conductores;
+  SysUtils, crt, Arch_Conductores, Conductores;
 
 type
-  T_Key = String[100];
 
   T_Elem = record
-    key:T_Key;
+    key:T_Dni;
     pos:Integer;
   end;
 
@@ -24,7 +23,7 @@ type
   Procedure Insertar(var arbol:T_Arbol; elem:T_Elem);
   Procedure CrearArbol(var arbol:T_Arbol; var arch:T_ArchConductores);
   Procedure InsertarConductor(var arbol:T_Arbol; var arch:T_ArchConductores; X:T_Conductores);
-  Function BuscarArbol(var arbol:T_Arbol; key:T_Key):Integer;
+  Function BuscarArbol(var arbol:T_Arbol; key:T_Dni):Integer;
 
 implementation
 
@@ -78,7 +77,7 @@ implementation
       Insertar(arbol, elem);
   end;
 
-  Function BuscarArbol(var arbol:T_Arbol; key:T_Key):Integer;
+  Function BuscarArbol(var arbol:T_Arbol; key:T_Dni):Integer;
   begin
     if (arbol = Nil) then
       BuscarArbol:= -1

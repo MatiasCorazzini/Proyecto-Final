@@ -7,6 +7,7 @@ procedure infracciones_fechas(var arch_infracciones:T_ArchInfracciones);
 procedure porcent_reincidencias(var arch_conductores:T_ArchConductores);
 procedure porcent_scoring0(var arch_conductores:T_ArchConductores);
 procedure rango_etario(var arch_conductores:T_ArchConductores);
+procedure TotalInfrac (var arch_infracciones:T_ArchInfracciones);
 
 
 implementation
@@ -192,6 +193,65 @@ implementation
     readkey();
   end;
 
-  // Function TOTAL a definir...
+  //Procedimiento TOTAL a definir...
+procedure TotalInfrac (var arch_infracciones:T_ArchInfracciones);
+var
+X:T_Infracciones;
+i:integer;
+c1:integer;
+c2:integer;
+c3:integer;
+c4:integer;
+c5:integer;
+c6:integer;
+c7:integer;
+c8:integer;
+c9:integer;
+c10:integer;
+begin
+AbrirInfracciones(arch_infracciones);
+//incializar contadores
+c1:=0;
+c2:=0;
+c3:=0;
+c4:=0;
+c5:=0;
+c6:=0;
+c7:=0;
+c8:=0;
+c9:=0;
+c10:=0;
+//sumar contadores
+for i:=0 to TamInfracciones(arch_infracciones)-1 do
+begin
+x:=LeerInfraccion(arch_infracciones,i);
+case X.tipo_infraccion of
+'Por falta de pago del peaje o contraprestación por tránsito':inc(c1);
+'Por conducir sin tener cumplida la edad reglamentaria':inc(c2);
+'Por utilizar franquicia de tránsito no reglamentaria, o usarla indebidamente':inc(c3);
+'Por no respetar las indicaciones de las luces de los semáforos':inc(c4);
+'Por circular con licencia de conducir vencida':inc(c5);
+'Por circular con maquinaria especial en infracción a las normas reglamentarias':inc(c6);
+'Por circular con vehículo de emergencia en infracción a las normas reglamentarias':inc(c7);
+'Por conducir un vehículo con más de MEDIO gramo por litro de alcohol en sangre':inc(c8);
+'Por participar u organizar competencias no autorizadas con automotores':inc(c9);
+'Por conducir estando inhabilitado o con la habilitación suspendida':inc(c10);
+end;
+end;
+//mostrar total
+writeln('Total por tipo de infraccion: ');
+writeln('Falta de pago del peaje o contraprestacion por transito: ',c1);
+writeln('Conducir sin tener cumplida la edad reglamentaria: ',c2);
+writeln('Utilizar franquicia de transito no reglamentaria, o usarla indebidamente: ',c3);
+writeln('No respetar las indicaciones de las luces de los semaforos: ',c4);
+writeln('Circular con licencia de conducir vencida: ',c5);
+writeln('Circular con maquinaria especial en infraccion a las normas reglamentarias: ',c6);
+writeln('Circular con vehículo de emergencia en infracción a las normas reglamentarias: ',c7);
+writeln('Conducir un vehículo con más de MEDIO gramo por litro de alcohol en sangre: ',c8);
+writeln('Participar u organizar competencias no autorizadas con automotores: ',c9 );
+writeln('Conducir estando inhabilitado o con la habilitación suspendida: ',c10);
+readkey();
+CerrarInfracciones(arch_infracciones);
+end;
 end.
 

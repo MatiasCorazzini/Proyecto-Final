@@ -15,6 +15,7 @@ begin
 op_estadis:=-1;
   while op_estadis <> 0 do
   begin
+  clrscr();
   GotoXY( 26, 8 );
   writeln('--------------------');
   GotoXY( 26, 9 );
@@ -26,7 +27,7 @@ op_estadis:=-1;
   GotoXY( 26, 12 );
   writeln('3-Porcentaje de conductores con scoring 0');
   GotoXY( 26, 13 );
-  writeln('4-Total (pendiente)');
+  writeln('4-Total de tipos de infracciones.');
   GotoXY( 26, 14 );
   writeln('5-Rango etario con mas infracciones');
   GotoXY( 26, 15 );
@@ -37,7 +38,7 @@ op_estadis:=-1;
    1:infracciones_fechas(archInfracciones);
    2:porcent_reincidencias(archConductores);
    3:porcent_scoring0(archConductores);
-   4:;//total
+   4:TotalInfrac (archInfracciones);
    5:rango_etario(archConductores);
    end;
   end;

@@ -156,7 +156,7 @@ implementation
       CerrarInfracciones(archInf);
 
       AbrirConductores(archCond);
-        ActualizarScoring(archCond, arbol, X);
+        ActualizarScoring(archCond, archInf, arbol, X);
       CerrarConductores(archCond);
 
       AbrirInfracciones(archInf);

@@ -7,11 +7,13 @@ interface
 uses
   SysUtils, DateUtils, crt, ArbolConductores, Arch_Conductores, Arch_Infracciones;
 
-  Procedure ActualizarScoring(var arch:T_ArchConductores; var arbol:T_Arbol; x1:T_Infracciones);
+  Procedure ActualizarScoring(var arch:T_ArchConductores; var arch2:T_ArchInfracciones; var arbol:T_Arbol; x1:T_Infracciones);
+  Function UltimaInfraccion(var arch:T_ArchInfracciones; dni:T_Dni):T_Infracciones;
+
   Procedure Reinsidencia(var archConductores:T_ArchConductores; arbol:T_Arbol; dni:T_Dni);
 
 implementation
-  Procedure ActualizarScoring(var arch:T_ArchConductores; var arbol:T_Arbol; x1:T_Infracciones);
+  Procedure ActualizarScoring(var arch:T_ArchConductores; var arch2:T_ArchInfracciones; var arbol:T_Arbol; x1:T_Infracciones);
   var
     x2:T_Conductores;
     pos:Integer;
@@ -25,8 +27,14 @@ implementation
       Dec(x2.scoring, x1.puntos_descontar);
       if x2.scoring <= 0 then
       begin
+        CerrarConductores(arch);
+        AbrirInfracciones(arch2);
+
         x2.habilitado:= False;
-        x2.fecha_habilitado:= x1.fecha_infraccion; // Cuando el scoring llega a 0 habilitado:= False y le pasa la fecha de la infraccion
+        x2.fecha_habilitado:= UltimaInfraccion(arch2, x2.dni).fecha_infraccion; // Cuando el scoring llega a 0 habilitado:= False y le pasa la fecha de ultima infraccion.
+
+        CerrarInfracciones(arch2);
+        AbrirConductores(arch);
       end;
 
       GuardarConductor(arch, pos, x2);
@@ -58,6 +66,7 @@ implementation
                   Clrscr();
                   inc(X.cantidad_reincidencias);
                   X.scoring:= 20;
+                  X.Habilitado:=True;
                   GuardarConductor(archConductores, pos, X);
 
                   Writeln('Reinsidencia Nro ', X.cantidad_reincidencias, '.');
@@ -80,6 +89,7 @@ implementation
                     Clrscr();
                     inc(X.cantidad_reincidencias);
                     X.scoring:= 20;
+                    X.Habilitado:=True;
                     GuardarConductor(archConductores, pos, X);
 
                     Writeln('Reinsidencia N°', X.cantidad_reincidencias, '.');
@@ -102,6 +112,7 @@ implementation
                     Clrscr();
                     inc(X.cantidad_reincidencias);
                     X.scoring:= 20;
+                    X.Habilitado:=True;
                     GuardarConductor(archConductores, pos, X);
 
                     Writeln('Reinsidencia N°', X.cantidad_reincidencias, '.');
@@ -125,6 +136,7 @@ implementation
                 Clrscr();
                 inc(X.cantidad_reincidencias);
                 X.scoring:= 20;
+                X.Habilitado:=True;
                 GuardarConductor(archConductores, pos, X);
 
                 Writeln('Reinsidencia N°', X.cantidad_reincidencias, '.');
@@ -141,6 +153,30 @@ implementation
               end;
       end;
     end;
+  end;
+
+  Function UltimaInfraccion(var arch:T_ArchInfracciones; dni:T_Dni):T_Infracciones;
+  var
+    fecha, ultFecha:String[10];
+    i:Integer;
+    X, ultInfraccion:T_Infracciones;
+  begin
+    ultFecha:='01/01/0001';
+
+    for i:=0 to TamInfracciones(arch)-1 do
+    begin
+      X:=LeerInfraccion(arch, i);
+      if X.dni = dni then
+      begin
+        fecha:=X.fecha_infraccion;
+        if StrToDate(fecha)>StrToDate(ultFecha) then
+        begin
+           ultFecha:=fecha;
+           ultInfraccion:=X;
+        end;
+      end;
+    end;
+    UltimaInfraccion:=ultInfraccion;
   end;
 
 end.

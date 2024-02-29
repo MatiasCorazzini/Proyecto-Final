@@ -26,8 +26,6 @@ begin
 
  pos:= BuscarArbol(arbol, DNI);
 
- // if pos <> -1 then X:= LeerConductor(archConductores, pos);
-
  while op <> '0' do
  begin
     if pos <> -1 then X:= LeerConductor(archConductores, pos);
@@ -60,7 +58,7 @@ begin
         Write('Inhabilitado');
       end;
 
-      CambiarTexto();
+      //CambiarTexto();
 
       GotoXY(30, 11);
       writeln('1-Modificacion');

@@ -18,7 +18,7 @@ end;
 
 Procedure CambiarTexto();
 begin
-   TextColor( Magenta );
+   TextColor( Cyan );
 end;
 
 end.

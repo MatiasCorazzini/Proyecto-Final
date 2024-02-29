@@ -3,7 +3,7 @@ unit Conductores;
 interface
 
 uses
-  SysUtils, crt, Arch_Conductores, ArbolConductores, Validadores;
+  SysUtils, crt, Arch_Conductores, ArbolConductores, Validadores, Estilo;
 
   Procedure AgregarConductor(var arch:T_ArchConductores; var arbol:T_Arbol; X:T_Conductores);
 
@@ -40,8 +40,10 @@ else
     readln(dni2);
     if not(valDni(dni2)) then writeln('DNI no valido.');
     until valDni(dni2);
-  X.dni:=dni2;
-  if BuscarArbol(arbol, dni2) <> -1 then flag:=False;
+
+    X.dni:=dni2;
+
+    if BuscarArbol(arbol, dni2) <> -1 then flag:=False;
   end;
 if flag then
 begin
@@ -49,21 +51,21 @@ pos:=BuscarArbol(arbol, dni);
 if pos <> -1 then
  begin
  if not(X.activo) then
- begin
-  repeat
-    clrscr();
-    Writeln('¿Decea dar de alta nuevamente?');
-    Writeln(' 1-SI   0-NO');
-    readln(op);
-    if op = '1' then
-    begin
-      X:=LeerConductor(arch, pos);
-      X.activo:= True;
-      GuardarConductor(arch, pos, X);
-      Writeln('Se dio de alta exisotamente');
-    end;
-  until (op = '1') or (op = '0');
- end;
+   begin
+   repeat
+      clrscr();
+      Writeln('¿Decea dar de alta nuevamente?');
+      Writeln(' 1-SI   0-NO');
+      readln(op);
+      if op = '1' then
+        begin
+        X:=LeerConductor(arch, pos);
+        X.activo:= True;
+        GuardarConductor(arch, pos, X);
+        Writeln('Se dio de alta exisotamente');
+        end;
+   until (op = '1') or (op = '0');
+   end;
 end
 else
  begin
@@ -98,24 +100,46 @@ end;
     begin
       X:=LeerConductor(arch, pos);
       writeln('-----------------------------------');
-      writeln('DNI:                 ', X.dni);
-      writeln('Nombre y Apellido:   ', X.apynom);
-      writeln('Fecha de Nacimiendo: ', X.fecha_nacimiento);
-      writeln('Telefono:            ', X.telefono);
-      writeln('Mail:                ', X.mail);
-      writeln('Scoring:             ', X.scoring);
+      writeln('DNI:                   ', X.dni);
+      writeln('Nombre y Apellido:     ', X.apynom);
+      writeln('Fecha de Nacimiendo:   ', X.fecha_nacimiento);
+      writeln('Telefono:              ', X.telefono);
+      writeln('Mail:                  ', X.mail);
+      writeln('Scoring:               ', X.scoring);
 
       if X.Habilitado then
-         writeln('Habilitado:          Si')
+       begin
+         write('Habilitado:');
+         TextColor( Green );
+         writeln('            Si');
+       end
       else
-         writeln('Habilitado:          No');
+      begin
+         write('Habilitado:');
+         TextColor( Red );
+         writeln('            No');
+      end;
+      CambiarTexto();
 
-      writeln('Fecha de habilitado: ', X.fecha_habilitado);
-      writeln('Reincidencias:       ', X.cantidad_reincidencias);
+      if not(X.Habilitado) then
+            writeln('Fecha de inhabilitado: ', X.fecha_habilitado);
+
+      writeln('Reincidencias:         ', X.cantidad_reincidencias);
+
       if X.Activo then
-         writeln('Activo:              Si')
+      begin
+         write('Activo:');
+         TextColor( Green );
+         writeln('                Si');
+      end
       else
-         writeln('Activo:              No');
+      begin
+         write('Activo:');
+         TextColor( Red );
+         writeln('                No');
+      end;
+      CambiarTexto();
+
       readkey();
     end
    else
@@ -158,21 +182,37 @@ end;
   var
     pos:Integer;
     X:T_Conductores;
+    op:String;
   begin
       pos:= BuscarArbol(arbol, dni);
+      op:= '-1';
+      repeat
+        Writeln('¿Decea dar de baja?');
+        Writeln('1-Si    0-No');
+        readln(op);
 
-      if pos <> -1 then
-      begin
-        X:= LeerConductor(arch, pos);
-        X.activo:= false;
-        GuardarConductor(arch, pos, X);
-        Writeln(X.apynom,', ',X.dni,' fue dado de baja.');
-      end
-      else
-      begin
-         Writeln('Conductor no encontrado.');
-      end;
-      readkey;
+        if op = '1' then
+        begin
+          if pos <> -1 then
+          begin
+            X:= LeerConductor(arch, pos);
+            X.activo:= false;
+            GuardarConductor(arch, pos, X);
+            Writeln(X.apynom,', ',X.dni,' fue dado de baja.');
+            op:='0';
+          end
+          else
+          begin
+             Writeln('Conductor no encontrado.');
+             op:='0';
+          end;
+          readkey;
+        end
+        else
+        begin
+          op:='0';
+        end;
+      until op = '0';
   end;
 
   Procedure ActualizarConductor(var arch:T_ArchConductores; arbol:T_Arbol; dni:T_Dni);
@@ -250,20 +290,4 @@ end;
   begin
 
   end;
-
-  // Procedure de pruba para recorrer el archivo.
-  {
-    Procedure RecorrerConductores(var arch:T_ArchConductores);
-    var
-      i:Integer;
-      X:T_Conductores;
-    begin
-        for i:=0 to TamConductores(arch)-1 do
-        begin
-             X:=LeerConductor(arch, i);
-             if X.activo then
-                writeln(X.dni);
-        end;
-    end;
-  }
 end.

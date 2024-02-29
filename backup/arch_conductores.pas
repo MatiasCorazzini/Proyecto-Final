@@ -25,7 +25,7 @@ type
      mail:string[30];
      scoring:integer;
      Habilitado:boolean;
-     fecha_habilitado:string[10];
+     fecha_habilitado:string[20];
      cantidad_reincidencias:integer;
      activo:boolean;
   end;

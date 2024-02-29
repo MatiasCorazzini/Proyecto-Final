@@ -166,10 +166,12 @@ implementation
 
   procedure MostrarInfraccion(X:T_Infracciones);
   begin
+    Writeln('   _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _');
     Writeln('  | DNI:                  ',X.dni);
     Writeln('  | Fecha de infraccione: ',X.fecha_infraccion);
     Writeln('  | Tipo de infraccion:   ',X.tipo_infraccion);
     Writeln('  | Puntos a descontar:   ',X.puntos_descontar);
+    Writeln('');
   end;
 
   // Procedure de pruba para recorrer el archivo.
