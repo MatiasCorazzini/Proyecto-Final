@@ -71,7 +71,7 @@ implementation
 
                   Writeln('Reinsidencia Nro ', X.cantidad_reincidencias, '.');
                   Writeln('La fecha de inhavilitacion fue el: ', X.fecha_habilitado);
-                  Writeln('Pasaron ', dias,'.');
+                  Writeln('Pasaron ', dias,' dias.');
                   Writeln('');
 
                   Writeln('Se reintegraron los puntos. Scoring actual: ', X.scoring,'.');
@@ -117,7 +117,7 @@ implementation
 
                     Writeln('Reinsidencia N°', X.cantidad_reincidencias, '.');
                     Writeln('La fecha de inhavilitacion fue el: ', X.fecha_habilitado);
-                    Writeln('Pasaron ', dias,'.');
+                    Writeln('Pasaron ', dias,' dias.');
                     Writeln('');
 
                     Writeln('Se reintegraron los puntos. Scoring actual: ', X.scoring,'.');
@@ -141,7 +141,7 @@ implementation
 
                 Writeln('Reinsidencia N°', X.cantidad_reincidencias, '.');
                 Writeln('La fecha de inhavilitacion fue el: ', X.fecha_habilitado);
-                Writeln('Pasaron ', dias,'.');
+                Writeln('Pasaron ', dias,' dias.');
                 Writeln('');
 
                 Writeln('Se reintegraron los puntos. Scoring actual: ', X.scoring,'.');

@@ -9,7 +9,7 @@
         <Filename Value="project1.lpr"/>
         <IsPartOfProject Value="True"/>
         <CursorPos X="7" Y="23"/>
-        <UsageCount Value="162"/>
+        <UsageCount Value="173"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -18,9 +18,9 @@
         <UnitName Value="Conductores"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="8"/>
-        <TopLine Value="196"/>
-        <CursorPos X="21" Y="215"/>
-        <UsageCount Value="161"/>
+        <TopLine Value="242"/>
+        <CursorPos X="32" Y="256"/>
+        <UsageCount Value="172"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -29,7 +29,7 @@
         <UnitName Value="Infracciones"/>
         <EditorIndex Value="9"/>
         <CursorPos X="53" Y="15"/>
-        <UsageCount Value="161"/>
+        <UsageCount Value="172"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -38,7 +38,7 @@
         <UnitName Value="Tipos"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="21" Y="8"/>
-        <UsageCount Value="162"/>
+        <UsageCount Value="173"/>
       </Unit>
       <Unit>
         <Filename Value="arbol.pas"/>
@@ -46,7 +46,7 @@
         <UnitName Value="ArbolConductores"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="38"/>
-        <UsageCount Value="162"/>
+        <UsageCount Value="173"/>
       </Unit>
       <Unit>
         <Filename Value="menu.pas"/>
@@ -55,7 +55,7 @@
         <EditorIndex Value="1"/>
         <TopLine Value="17"/>
         <CursorPos X="27" Y="11"/>
-        <UsageCount Value="156"/>
+        <UsageCount Value="167"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -63,9 +63,9 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="Arch_Conductores"/>
         <EditorIndex Value="6"/>
-        <TopLine Value="13"/>
-        <CursorPos X="59" Y="34"/>
-        <UsageCount Value="144"/>
+        <TopLine Value="42"/>
+        <CursorPos Y="50"/>
+        <UsageCount Value="155"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -75,7 +75,7 @@
         <EditorIndex Value="7"/>
         <TopLine Value="3"/>
         <CursorPos X="27" Y="12"/>
-        <UsageCount Value="144"/>
+        <UsageCount Value="155"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -83,8 +83,9 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="ArbolConductores"/>
         <EditorIndex Value="13"/>
-        <CursorPos X="34" Y="6"/>
-        <UsageCount Value="136"/>
+        <TopLine Value="32"/>
+        <CursorPos X="26" Y="53"/>
+        <UsageCount Value="147"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -94,16 +95,16 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="45"/>
         <CursorPos X="14" Y="45"/>
-        <UsageCount Value="136"/>
+        <UsageCount Value="147"/>
       </Unit>
       <Unit>
         <Filename Value="scoring.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Scoring"/>
         <EditorIndex Value="12"/>
-        <TopLine Value="10"/>
-        <CursorPos X="48" Y="36"/>
-        <UsageCount Value="129"/>
+        <TopLine Value="123"/>
+        <CursorPos X="17" Y="134"/>
+        <UsageCount Value="140"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -111,9 +112,9 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="Lista_Conductores"/>
         <EditorIndex Value="10"/>
-        <TopLine Value="152"/>
-        <CursorPos X="100" Y="182"/>
-        <UsageCount Value="95"/>
+        <TopLine Value="132"/>
+        <CursorPos X="191" Y="142"/>
+        <UsageCount Value="106"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -123,7 +124,7 @@
         <EditorIndex Value="11"/>
         <TopLine Value="207"/>
         <CursorPos X="42" Y="218"/>
-        <UsageCount Value="92"/>
+        <UsageCount Value="103"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -133,7 +134,7 @@
         <EditorIndex Value="14"/>
         <TopLine Value="17"/>
         <CursorPos X="8" Y="26"/>
-        <UsageCount Value="85"/>
+        <UsageCount Value="96"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -141,8 +142,8 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="Estadisticas"/>
         <EditorIndex Value="15"/>
-        <CursorPos X="65" Y="10"/>
-        <UsageCount Value="75"/>
+        <CursorPos Y="107"/>
+        <UsageCount Value="86"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -151,7 +152,7 @@
         <UnitName Value="Estilo"/>
         <EditorIndex Value="16"/>
         <CursorPos X="28" Y="21"/>
-        <UsageCount Value="66"/>
+        <UsageCount Value="77"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -159,9 +160,8 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="Menu_Estadistica"/>
         <EditorIndex Value="5"/>
-        <TopLine Value="6"/>
-        <CursorPos X="48" Y="32"/>
-        <UsageCount Value="63"/>
+        <CursorPos X="76" Y="27"/>
+        <UsageCount Value="74"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -170,7 +170,7 @@
         <UnitName Value="Menu_Listados"/>
         <EditorIndex Value="4"/>
         <CursorPos X="23" Y="45"/>
-        <UsageCount Value="58"/>
+        <UsageCount Value="69"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -191,8 +191,8 @@
         <UnitName Value="Menu_Conductores"/>
         <EditorIndex Value="2"/>
         <TopLine Value="57"/>
-        <CursorPos X="7" Y="61"/>
-        <UsageCount Value="63"/>
+        <CursorPos X="42" Y="76"/>
+        <UsageCount Value="68"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -200,7 +200,7 @@
         <UnitName Value="Menu_Infracciones"/>
         <EditorIndex Value="3"/>
         <CursorPos X="23" Y="32"/>
-        <UsageCount Value="63"/>
+        <UsageCount Value="68"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -225,38 +225,6 @@
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="lista_infracciones.pas"/>
-        <Caret Line="235" Column="142" TopLine="209"/>
-      </Position>
-      <Position>
-        <Filename Value="estadisticas.pas"/>
-        <Caret Line="23" Column="42" TopLine="23"/>
-      </Position>
-      <Position>
-        <Filename Value="conductores.pas"/>
-        <Caret Line="70" Column="41" TopLine="64"/>
-      </Position>
-      <Position>
-        <Filename Value="conductores.pas"/>
-        <Caret Column="7"/>
-      </Position>
-      <Position>
-        <Filename Value="menu_conductores.pas"/>
-        <Caret Line="48" Column="10" TopLine="20"/>
-      </Position>
-      <Position>
-        <Filename Value="scoring.pas"/>
-        <Caret Line="122" Column="48" TopLine="93"/>
-      </Position>
-      <Position>
-        <Filename Value="scoring.pas"/>
-        <Caret Line="46" Column="22" TopLine="24"/>
-      </Position>
-      <Position>
-        <Filename Value="scoring.pas"/>
-        <Caret Line="8" Column="16"/>
-      </Position>
       <Position>
         <Filename Value="scoring.pas"/>
         <Caret Line="53" Column="12" TopLine="32"/>
@@ -344,6 +312,38 @@
       <Position>
         <Filename Value="conductores.pas"/>
         <Caret Line="216" Column="3" TopLine="192"/>
+      </Position>
+      <Position>
+        <Filename Value="menu_estadistica.pas"/>
+        <Caret Line="24" Column="52"/>
+      </Position>
+      <Position>
+        <Filename Value="estadisticas.pas"/>
+        <Caret Line="8" Column="66"/>
+      </Position>
+      <Position>
+        <Filename Value="estadisticas.pas"/>
+        <Caret Line="83" Column="37" TopLine="62"/>
+      </Position>
+      <Position>
+        <Filename Value="estadisticas.pas"/>
+        <Caret Line="105" Column="31" TopLine="65"/>
+      </Position>
+      <Position>
+        <Filename Value="menu_estadistica.pas"/>
+        <Caret Line="45" Column="17" TopLine="8"/>
+      </Position>
+      <Position>
+        <Filename Value="menu_estadistica.pas"/>
+        <Caret Line="26" Column="37" TopLine="8"/>
+      </Position>
+      <Position>
+        <Filename Value="conductores.pas"/>
+        <Caret Line="306" Column="36" TopLine="276"/>
+      </Position>
+      <Position>
+        <Filename Value="conductores.pas"/>
+        <Caret Line="245" Column="44" TopLine="268"/>
       </Position>
     </JumpHistory>
     <RunParams>

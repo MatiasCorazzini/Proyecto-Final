@@ -31,7 +31,7 @@ implementation
         AbrirInfracciones(arch2);
 
         x2.habilitado:= False;
-        x2.fecha_habilitado:= UltimaInfraccion(arch2, x2.dni).fecha_infraccion; // Cuando el scoring llega a 0 habilitado:= False y le pasa la fecha de ultima infraccion.
+        x2.fecha_habilitado:= UltimaInfraccion(arch2, x2.dni).fecha_infraccion; // Cuando el scoring llega a 0 habilitado:= False y le pasa la fecha de la ultima infraccion.
 
         CerrarInfracciones(arch2);
         AbrirConductores(arch);
@@ -71,7 +71,7 @@ implementation
 
                   Writeln('Reinsidencia Nro ', X.cantidad_reincidencias, '.');
                   Writeln('La fecha de inhavilitacion fue el: ', X.fecha_habilitado);
-                  Writeln('Pasaron ', dias,'.');
+                  Writeln('Pasaron ', dias,' dias.');
                   Writeln('');
 
                   Writeln('Se reintegraron los puntos. Scoring actual: ', X.scoring,'.');

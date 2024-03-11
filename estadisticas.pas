@@ -4,8 +4,8 @@ uses
 SysUtils, crt, Arch_Infracciones, Arch_Conductores, Validadores;
 
 procedure infracciones_fechas(var arch_infracciones:T_ArchInfracciones);
-procedure porcent_reincidencias(var arch_conductores:T_ArchConductores);
-procedure porcent_scoring0(var arch_conductores:T_ArchConductores);
+function porcent_reincidencias(var arch_conductores:T_ArchConductores):Real;
+function porcent_scoring0(var arch_conductores:T_ArchConductores):Real;
 procedure rango_etario(var arch_conductores:T_ArchConductores);
 procedure TotalInfrac (var arch_infracciones:T_ArchInfracciones);
 
@@ -64,7 +64,7 @@ implementation
   end;
 
   //Porcentaje de conductores con reincidencia
-  procedure porcent_reincidencias(var arch_conductores:T_ArchConductores);
+  function porcent_reincidencias(var arch_conductores:T_ArchConductores):Real;
   var
     i,cont:integer;
     x1:T_conductores;
@@ -80,13 +80,13 @@ implementation
     end;
 
     porcent:=cont/TamConductores(arch_conductores)*100;
-    writeln('El porcentaje de conductores con reincidencia es ',porcent:0:2, '%');
+    porcent_reincidencias:= porcent;
     CerrarConductores(arch_conductores);
-    readkey;
+
   end;
 
   //Porcentaje de conductores con scoring 0
-  procedure porcent_scoring0(var arch_conductores:T_ArchConductores);
+  function porcent_scoring0(var arch_conductores:T_ArchConductores):Real;
   var
     cont:integer;
     x1:T_conductores;
@@ -102,9 +102,9 @@ implementation
      if x1.scoring = 0 then cont:=cont+1;
      end;
     porcent:=cont/TamConductores(arch_conductores)*100;
-    writeln('El porcentaje de conductores con scoring 0 es ',porcent:0:2, '%');
+    porcent_scoring0:= porcent;
     CerrarConductores(arch_conductores);
-    readkey;
+
   end;
 
   function CalculateAge(Birthday: TDate): Integer;
@@ -240,16 +240,16 @@ end;
 end;
 //mostrar total
 writeln('Total por tipo de infraccion: ');
-writeln('Falta de pago del peaje o contraprestacion por transito: ',c1);
-writeln('Conducir sin tener cumplida la edad reglamentaria: ',c2);
-writeln('Utilizar franquicia de transito no reglamentaria, o usarla indebidamente: ',c3);
-writeln('No respetar las indicaciones de las luces de los semaforos: ',c4);
-writeln('Circular con licencia de conducir vencida: ',c5);
-writeln('Circular con maquinaria especial en infraccion a las normas reglamentarias: ',c6);
+writeln('Falta de pago del peaje o contraprestacion por transito:                       ',c1);
+writeln('Conducir sin tener cumplida la edad reglamentaria:                             ',c2);
+writeln('Utilizar franquicia de transito no reglamentaria, o usarla indebidamente:      ',c3);
+writeln('No respetar las indicaciones de las luces de los semaforos:                    ',c4);
+writeln('Circular con licencia de conducir vencida:                                     ',c5);
+writeln('Circular con maquinaria especial en infraccion a las normas reglamentarias:    ',c6);
 writeln('Circular con vehículo de emergencia en infracción a las normas reglamentarias: ',c7);
-writeln('Conducir un vehículo con más de MEDIO gramo por litro de alcohol en sangre: ',c8);
-writeln('Participar u organizar competencias no autorizadas con automotores: ',c9 );
-writeln('Conducir estando inhabilitado o con la habilitación suspendida: ',c10);
+writeln('Conducir un vehículo con más de MEDIO gramo por litro de alcohol en sangre:    ',c8);
+writeln('Participar u organizar competencias no autorizadas con automotores:            ',c9 );
+writeln('Conducir estando inhabilitado o con la habilitación suspendida:                ',c10);
 readkey();
 CerrarInfracciones(arch_infracciones);
 end;

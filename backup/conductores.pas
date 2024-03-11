@@ -210,70 +210,115 @@ end;
         end
         else
         begin
-          op:=0;
+          op:='0';
         end;
-      until op = 0;
+      until op = '0';
   end;
 
   Procedure ActualizarConductor(var arch:T_ArchConductores; arbol:T_Arbol; dni:T_Dni);
   var
     pos:Integer;
     X:T_Conductores;
-
-    op:Byte;
-    aux1:String;
-    aux2:String;
+    op,aux1,aux2,aux3,aux4:String;
   begin
     aux1:='';
     aux2:='';
+    aux3:='';
+    aux4:='';
 
-    op:=255;
-
+    op:='-1';
     pos:= BuscarArbol(arbol, dni);
 
     if pos <> -1 then
     begin
       X:= LeerConductor(arch, pos);
 
-      aux1:= X.telefono;
-      aux2:= X.mail;
+      aux1:= X.apynom;
+      aux2:= X.fecha_nacimiento;
+      aux3:= X.telefono;
+      aux4:= X.mail;
 
-      while op <> 0 do
+      while op <> '0' do
       begin
-         writeln('Actualizar:');
-         writeln('1-Tel.');
-         writeln('2-Mail.');
+         Clrscr();
+         Writeln('   _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _');
+         Writeln('  | ',aux1);
+         Writeln('  | ',aux2);
+         Writeln('  | ',aux3);
+         Writeln('  | ',aux4);
+         writeln('   - - - - - - - - - - - - - - - - - -');
          writeln('');
-         writeln('0-Listo.');
+
+         writeln('Actualizar:');
+         writeln('1-Nombre');
+         writeln('2-Fecha de nacimineto.');
+         writeln('2-Tel');
+         writeln('3-Mail');
+         writeln('');
+         writeln('0-Listo');
          readln(op);
 
          case op of
-              1:
+              '1':
                 begin
-                   writeln('Nuevo tel: ');
+                   write('Apellido y Nombre: ');
                    readln(aux1);
                 end;
 
-              2:
+              '2':
                 begin
-                   writeln('Nuevo mail: ');
+                   write('Fecha de nacimiento: ');
                    readln(aux2);
+                end;
+
+              '3':
+                begin
+                   write('Telefono: ');
+                   readln(aux3);
+                end;
+
+              '4':
+                begin
+                   write('Mail: ');
+                   readln(aux4);
                 end;
          end;
       end;
-       op:=225;
+      clrscr();
+       op:='-1';
+       {
+       {-----------------------------------------------------------}
+       if aux1 = X.apynom then
+          Writeln('    ', X.apynom )
+       else
+          Writeln('    Nuevo apellido y nombre:   ', X.apynom);
+       {-----------------------------------------------------------}
+       if aux2 = X.fecha_nacimiento then
+          writeln('    ',X.fecha_nacimiento)
+       else
+          writeln('    Nueva fecha de nacimiento: ',aux2);
+       {-----------------------------------------------------------}
+       if aux3 = X.telefono then
+          writeln('    ',X.telefono)
+       else
+          writeln('    Nuevo tel: ', aux3);
+       {-----------------------------------------------------------}
+       if aux4 = X.mail then
+          writeln('    ',X.mail)
+       else
+          writeln('    Nuevo mail: ', aux4);
 
-       Writeln('   ', X.apynom ,':');
-       writeln('    Nuevo tel: ', aux1);
-       writeln('    Nuevo mail: ', aux2);
        writeln('');
-       writeln('¿Decea guardar? 1-SI   0-NO');
+       }
+       writeln('Decea guardar cambios? 1-SI   0-NO');
        readln(op);
 
-       if op = 1 then
+       if op = '1' then
        begin
-         X.telefono:=aux1;
-         X.mail:=aux2;
+         X.apynom:=aux1;
+         X.fecha_nacimiento:=aux2;
+         X.telefono:=aux3;
+         X.mail:=aux4;
          GuardarConductor(arch, pos, X);
          writeln('Guardado...');
        end;
