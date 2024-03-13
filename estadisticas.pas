@@ -99,7 +99,7 @@ implementation
     for i:=0 to TamConductores(arch_conductores)-1 do
      begin
      x1:=LeerConductor(arch_conductores,i);
-     if x1.scoring = 0 then cont:=cont+1;
+     if x1.scoring <= 0 then cont:=cont+1;
      end;
     porcent:=cont/TamConductores(arch_conductores)*100;
     porcent_scoring0:= porcent;
@@ -187,7 +187,7 @@ implementation
     end;
 
     // Imprime el rango etario con el mayor número de infracciones
-    writeln('Rango etario con mas infracciones:', rango, ' con ', maxCont, ' infracciones.');
+    writeln('Rango etario con mas infracciones: ', rango, ' con ', maxCont, ' infracciones.');
 
     CerrarConductores(arch_conductores);
     readkey();
@@ -246,10 +246,10 @@ writeln('Utilizar franquicia de transito no reglamentaria, o usarla indebidament
 writeln('No respetar las indicaciones de las luces de los semaforos:                    ',c4);
 writeln('Circular con licencia de conducir vencida:                                     ',c5);
 writeln('Circular con maquinaria especial en infraccion a las normas reglamentarias:    ',c6);
-writeln('Circular con vehículo de emergencia en infracción a las normas reglamentarias: ',c7);
-writeln('Conducir un vehículo con más de MEDIO gramo por litro de alcohol en sangre:    ',c8);
-writeln('Participar u organizar competencias no autorizadas con automotores:            ',c9 );
-writeln('Conducir estando inhabilitado o con la habilitación suspendida:                ',c10);
+writeln('Circular con vehiculo de emergencia en infraccion a las normas reglamentarias: ',c7);
+writeln('Conducir un vehiculo con mas de MEDIO gramo por litro de alcohol en sangre:    ',c8);
+writeln('Participar u organizar competencias no autorizadas con automotores:            ',c9);
+writeln('Conducir estando inhabilitado o con la habilitacion suspendida:                ',c10);
 readkey();
 CerrarInfracciones(arch_infracciones);
 end;

@@ -2,7 +2,7 @@ unit Menu_Estadistica;
 interface
 
 uses
-SysUtils, crt, Estadisticas, Arch_Infracciones, Arch_Conductores;
+SysUtils, crt, Estadisticas, Arch_Infracciones, Arch_Conductores, Estilo;
 
 procedure menu_estadisticas(var archConductores:T_ArchConductores; var archInfracciones:T_ArchInfracciones);
 
@@ -36,11 +36,32 @@ while op_estadis <> '0' do
   GotoXY( 26, 9 );
   writeln('MENU DE ESTADISTICA');
   GotoXY( 26, 11 );
-  writeln('  Conductores: ', tamCond, '  Infracciones: ', tamInf);
+  //write('  Conductores: ', tamCond, '  Infracciones: ', tamInf);
+
+  write('  Conductores: ');
+
+  TextColor( Brown );
+    Write(tamCond);
+  CambiarTexto();
+
+  write('  Infracciones: ');
+
+  TextColor( Brown );
+    Writeln(tamInf);
+  CambiarTexto();
+
   GotoXY( 26, 12 );
-  Writeln('  Reincidencias: ',porcent1:0:2,'%');
+  Write('  Reincidencias: ');
+  TextColor( Brown );
+    Writeln(porcent1:0:2,'%');
+  CambiarTexto();
+
   GotoXY( 26, 13);
-  Writeln('  Inhabilitados: ',porcent2:0:2,'%');
+  Write('  Inhabilitados: ');
+  TextColor( Brown );
+    Writeln(porcent2:0:2,'%');
+  CambiarTexto();
+
   GotoXY( 26, 15 );
   writeln('1-Cantidad de infracciones entre dos fechas.');
   GotoXY( 26, 16 );
@@ -53,8 +74,8 @@ while op_estadis <> '0' do
   clrscr();
    case op_estadis of
    '1':infracciones_fechas(archInfracciones);
-   '2':rango_etario(archConductores);
-   '3':TotalInfrac (archInfracciones);
+   '2':TotalInfrac (archInfracciones);
+   '3':rango_etario(archConductores);
    end;
   end;
 end;
