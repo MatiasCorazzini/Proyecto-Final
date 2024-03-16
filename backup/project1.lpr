@@ -20,7 +20,7 @@ uses
   {$IFDEF UNIX}
   cthreads,
   {$ENDIF}
-  Menu, Menu_Listados;
+  Menu;
 
 { Constantes principales del sistema de scoring }
 

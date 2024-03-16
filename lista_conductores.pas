@@ -5,7 +5,7 @@ unit Lista_Conductores;
 interface
 
 uses
-  crt, SysUtils, Arch_Conductores, Estilo;
+  crt, SysUtils, Arch_Conductores, Estilo, Conductores;
 
 type
   T_Dato = T_Conductores;

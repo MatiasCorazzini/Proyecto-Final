@@ -1,7 +1,7 @@
 unit Estadisticas;
 interface
 uses
-SysUtils, crt, Arch_Infracciones, Arch_Conductores, Validadores;
+SysUtils, crt, Arch_Infracciones, Arch_Conductores, Validadores, Conductores;
 
 procedure infracciones_fechas(var arch_infracciones:T_ArchInfracciones);
 function porcent_reincidencias(var arch_conductores:T_ArchConductores):Real;
@@ -99,7 +99,7 @@ implementation
     for i:=0 to TamConductores(arch_conductores)-1 do
      begin
      x1:=LeerConductor(arch_conductores,i);
-     if x1.scoring = 0 then cont:=cont+1;
+     if x1.scoring <= 0 then cont:=cont+1;
      end;
     porcent:=cont/TamConductores(arch_conductores)*100;
     porcent_scoring0:= porcent;

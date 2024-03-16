@@ -10,7 +10,7 @@ const
 
 type
   T_Infracciones = Record
-    dni:integer;
+    dni:String[8];
     fecha_infraccion:string[10];
     tipo_infraccion:string[200];
     puntos_descontar:Byte;
@@ -26,7 +26,6 @@ type
 
   Function LeerInfraccion(var arch:T_ArchInfracciones; pos:Integer):T_Infracciones;
   Procedure GuardarInfraccion(var arch:T_ArchInfracciones; pos:Integer; X:T_Infracciones);
-
 
 implementation
 
@@ -51,23 +50,6 @@ implementation
   Procedure CerrarInfracciones(var arch:T_ArchInfracciones);
   begin
     Close(arch);
-  end;
-
-  Function TamInfracciones(var arch:T_ArchInfracciones):Integer;
-  begin
-    TamInfracciones:= Filesize(arch);
-  end;
-
-  Function LeerInfraccion(var arch:T_ArchInfracciones; pos:Integer):T_Infracciones; //
-  begin
-    Seek(arch, pos);
-    Read(arch, LeerInfraccion);
-  end;
-
-  Procedure GuardarInfraccion(var arch:T_ArchInfracciones; pos:Integer; X:T_Infracciones);
-  begin
-    Seek(arch, pos);
-    Write(arch, X);
   end;
 end.
 

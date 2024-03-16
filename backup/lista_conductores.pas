@@ -179,19 +179,20 @@ implementation
 
   procedure ImprimirUsuario(X:T_Conductores; counter:Integer);
   begin
-     write(counter:3, ' | ', Format('%-25.25s', [X.apynom]), ' | ', Format('%-9.9s', [X.dni]),' | ', Format('%-7d', [X.scoring]),' | ');
+     write(counter:3, ' | ', Format('%-25.25s', [X.apynom]), ' | ', Format('%-9.9s', [X.dni]),' | ');
 
     if X.cantidad_reincidencias > 0 then
     begin
-      TextColor( Oragne );
+      TextColor( Brown );
       Write(Format('%-7d', [X.scoring]));
     end
     else
     begin
-      TextColor( Red);
-      Write('NO        ');
+      Write(Format('%-7d', [X.scoring]));
     end;
     CambiarTexto();
+
+    write(' | ');
 
     if X.habilitado then
     begin

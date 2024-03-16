@@ -5,7 +5,7 @@ unit Lista_Infracciones;
 interface
 
 uses
-  SysUtils, crt, Arch_Infracciones, Arch_Conductores, ArbolConductores, Validadores, Estilo;
+  SysUtils, crt, Arch_Infracciones, Arch_Conductores, ArbolConductores, Validadores, Estilo, Conductores, Infracciones;
 
 type
   T_Dato = T_Infracciones;
@@ -86,41 +86,6 @@ implementation
 
     end;
     inc(L.tam);
-  end;
-
-  procedure Siguiente(L:T_ListaInfracciones);
-  begin
-    L.act:= L.act^.sig;
-  end;
-
-  procedure Primero(L:T_ListaInfracciones);
-  begin
-    L.act:= L.cab;
-  end;
-
-  function Fin(L:T_ListaInfracciones):boolean;
-  begin
-    Fin:= L.act = nil;
-  end;
-
-  function TamLista(L:T_ListaInfracciones):byte;
-  begin
-    TamLista:= L.tam;
-  end;
-
-  function ListaLlena(L:T_ListaInfracciones):boolean;
-  begin
-    ListaLlena:= GetHeapStatus.TotalFree < SizeOf(T_dato);
-  end;
-
-  function ListaVacia(L:T_ListaInfracciones):boolean;
-  begin
-    ListaVacia := L.tam = 0;
-  end;
-
-  function Recuperar(var L:T_ListaInfracciones):T_Dato; // Recuperar(L, X);
-  begin
-    Recuperar:= L.act^.info;
   end;
 
   procedure ImprimirListaInfracciones(var L:T_ListaInfracciones; desde, hasta:String; dni:String);

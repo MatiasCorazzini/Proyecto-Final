@@ -1,12 +1,3 @@
-{
- CONSULTAS:
-           Cuando se ingresa una infraccion, se presupone que el conductor YA
-           está  cargado en el sistema, o en el caso q no este hay que cargarlo?
-
-           Consulata de AMC y listado de Infracciones de un conductor en un periodo...
-
-}
-
 unit Infracciones;
 
 interface
@@ -17,8 +8,15 @@ uses
   Procedure ConsultarInfraccion(var arch:T_ArchInfracciones);
   Procedure AltaInfracciones(var archInf:T_ArchInfracciones; var archCond:T_ArchConductores; arbol:T_Arbol);
 
-  Procedure RecorrerInfracciones(var arch:T_ArchInfracciones);
   Procedure MostrarInfraccion(X:T_Infracciones);
+
+  Function TamInfracciones(var arch:T_ArchInfracciones):Integer;
+
+  Function LeerInfraccion(var arch:T_ArchInfracciones; pos:Integer):T_Infracciones;
+  Procedure GuardarInfraccion(var arch:T_ArchInfracciones; pos:Integer; X:T_Infracciones);
+
+  Procedure ActualizarScoring(var arch:T_ArchConductores; var arch2:T_ArchInfracciones; var arbol:T_Arbol; x1:T_Infracciones);
+  Function UltimaInfraccion(var arch:T_ArchInfracciones; dni:T_Dni):T_Infracciones;
 
 implementation
 
@@ -174,16 +172,77 @@ implementation
     Writeln('');
   end;
 
-  // Procedure de pruba para recorrer el archivo.
-          Procedure RecorrerInfracciones(var arch:T_ArchInfracciones);
-          var
-            i:Integer;
-            X:T_Infracciones;
-          begin
-              for i:=0 to TamInfracciones(arch)-1 do
-              begin
-                   X:=LeerInfraccion(arch, i);
-                   writeln(X.dni);
-              end;
-          end;
+  Function TamInfracciones(var arch:T_ArchInfracciones):Integer;
+  begin
+    TamInfracciones:= Filesize(arch);
+  end;
+
+  Function LeerInfraccion(var arch:T_ArchInfracciones; pos:Integer):T_Infracciones; //
+  begin
+    Seek(arch, pos);
+    Read(arch, LeerInfraccion);
+  end;
+
+  Procedure GuardarInfraccion(var arch:T_ArchInfracciones; pos:Integer; X:T_Infracciones);
+  begin
+    Seek(arch, pos);
+    Write(arch, X);
+  end;
+
+  Procedure ActualizarScoring(var arch:T_ArchConductores; var arch2:T_ArchInfracciones; var arbol:T_Arbol; x1:T_Infracciones);
+  var
+    x2:T_Conductores;
+    pos:Integer;
+  begin
+    pos:= BuscarArbol(arbol, x1.dni);
+
+    if pos <> -1 then
+    begin
+      x2:= LeerConductor(arch, pos);
+
+      Dec(x2.scoring, x1.puntos_descontar);
+      if x2.scoring <= 0 then
+      begin
+        CerrarConductores(arch);
+        AbrirInfracciones(arch2);
+
+        x2.habilitado:= False;
+        x2.fecha_habilitado:= UltimaInfraccion(arch2, x2.dni).fecha_infraccion; // Cuando el scoring llega a 0 habilitado:= False y le pasa la fecha de la ultima infraccion.
+
+        CerrarInfracciones(arch2);
+        AbrirConductores(arch);
+      end;
+
+      GuardarConductor(arch, pos, x2);
+      writeln('Se actualizo el scoring.');
+    end
+    else
+    begin
+      Writeln('No se pudo actualizar el scoring.');
+    end;
+  end;
+
+  Function UltimaInfraccion(var arch:T_ArchInfracciones; dni:T_Dni):T_Infracciones;
+  var
+    fecha, ultFecha:String[10];
+    i:Integer;
+    X, ultInfraccion:T_Infracciones;
+  begin
+    ultFecha:='01/01/0001';
+
+    for i:=0 to TamInfracciones(arch)-1 do
+    begin
+      X:=LeerInfraccion(arch, i);
+      if X.dni = dni then
+      begin
+        fecha:=X.fecha_infraccion;
+        if StrToDate(fecha)>StrToDate(ultFecha) then
+        begin
+           ultFecha:=fecha;
+           ultInfraccion:=X;
+        end;
+      end;
+    end;
+    UltimaInfraccion:=ultInfraccion;
+  end;
 end.

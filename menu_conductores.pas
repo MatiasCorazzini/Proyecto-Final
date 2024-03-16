@@ -21,7 +21,11 @@ begin
  repeat
    write('Ingrese un DNI: ');
    readln(DNI);
-   if not(valDni(DNI)) then writeln('DNI no valido.');
+   if not(valDni(DNI)) then
+   begin
+      clrscr();
+      writeln('DNI no valido.');
+   end;
  until valDni(DNI);
 
  pos:= BuscarArbol(arbol, DNI);

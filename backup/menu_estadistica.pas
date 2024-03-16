@@ -2,7 +2,7 @@ unit Menu_Estadistica;
 interface
 
 uses
-SysUtils, crt, Estadisticas, Arch_Infracciones, Arch_Conductores, Estilo;
+SysUtils, crt, Estadisticas, Arch_Infracciones, Arch_Conductores, Estilo, Conductores;
 
 procedure menu_estadisticas(var archConductores:T_ArchConductores; var archInfracciones:T_ArchInfracciones);
 
@@ -59,7 +59,7 @@ while op_estadis <> '0' do
   GotoXY( 26, 13);
   Write('  Inhabilitados: ');
   TextColor( Brown );
-    Write(porcent2:0:2,'%');
+    Writeln(porcent2:0:2,'%');
   CambiarTexto();
 
   GotoXY( 26, 15 );

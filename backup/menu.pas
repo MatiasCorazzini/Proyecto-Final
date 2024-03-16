@@ -31,7 +31,7 @@ implementation
     op:=' ';
     while op <> '0' do
     begin
-      //clrscr();
+      clrscr();
       GotoXY( 30, 12 );
       writeln('Seleccione con que desea trabajar:');
       GotoXY( 30, 13 );

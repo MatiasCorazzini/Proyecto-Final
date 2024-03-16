@@ -11,6 +11,14 @@ uses
   Procedure ConsultarConductor(var arch:T_ArchConductores; arbol:T_Arbol; dni:T_Dni);
   Procedure BajaConductor(var arch:T_ArchConductores; arbol:T_Arbol; dni:T_Dni);
   Procedure ActualizarConductor(var arch:T_ArchConductores; arbol:T_Arbol; dni:T_Dni);
+  Procedure CrearArbol(var arbol:T_Arbol; var arch:T_ArchConductores);
+
+  Function TamConductores(var arch:T_ArchConductores):Integer;
+
+  Function LeerConductor(var arch:T_ArchConductores; pos:Integer):T_Conductores; //
+  Procedure GuardarConductor(var arch:T_ArchConductores; pos:Integer; X:T_Conductores);
+
+  Procedure InsertarConductor(var arbol:T_Arbol; var arch:T_ArchConductores; X:T_Conductores);
 
 const
   maxPunt = 20; // Maximos de scoring que se puede tener.
@@ -329,10 +337,52 @@ end;
       end;
   end;
 
-  Procedure DarDeAltaInactivo(var arch:T_ArchConductores; pos:Integer);
+  Procedure CrearArbol(var arbol:T_Arbol; var arch:T_ArchConductores);
   var
-    X:T_Conductores;
+    i:Integer;
+    C:T_Conductores;
+    elem:T_Elem;
   begin
+    arbol := nil; // Inicializar el árbol
 
+    if TamConductores(arch) > 0 then
+    begin
+      for i:=0 to TamConductores(arch)-1 do
+      begin
+        C:= LeerConductor(arch, i);
+        elem.key:= C.dni;
+        elem.pos:= i;
+
+        Insertar(arbol, elem);
+      end;
+    end;
+    Writeln('Arbol creado...');
+  end;
+
+  Function TamConductores(var arch:T_ArchConductores):Integer;
+  begin
+    TamConductores:= Filesize(arch);
+  end;
+
+  Function LeerConductor(var arch:T_ArchConductores; pos:Integer):T_Conductores; //
+  begin
+    Seek(arch, pos);
+    Read(arch, LeerConductor);
+  end;
+
+  Procedure GuardarConductor(var arch:T_ArchConductores; pos:Integer; X:T_Conductores);
+  begin
+    Seek(arch, pos);
+    Write(arch, X);
+  end;
+
+  Procedure InsertarConductor(var arbol:T_Arbol; var arch:T_ArchConductores; X:T_Conductores);
+  var
+    elem:T_Elem;
+  begin
+      elem.key:= X.dni;
+      elem.pos:= TamConductores(arch)-1;
+
+      Insertar(arbol, elem);
   end;
 end.

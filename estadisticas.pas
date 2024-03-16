@@ -1,7 +1,7 @@
 unit Estadisticas;
 interface
 uses
-SysUtils, crt, Arch_Infracciones, Arch_Conductores, Validadores;
+SysUtils, crt, Arch_Infracciones, Arch_Conductores, Validadores, Conductores, Infracciones;
 
 procedure infracciones_fechas(var arch_infracciones:T_ArchInfracciones);
 function porcent_reincidencias(var arch_conductores:T_ArchConductores):Real;

@@ -19,6 +19,7 @@ begin
  AbrirConductores(archConductores);
 
  repeat
+   clrscr();
    write('Ingrese un DNI: ');
    readln(DNI);
    if not(valDni(DNI)) then writeln('DNI no valido.');
@@ -58,7 +59,7 @@ begin
         Write('Inhabilitado');
       end;
 
-      //CambiarTexto();
+      CambiarTexto();
 
       GotoXY(30, 11);
       writeln('1-Modificacion');

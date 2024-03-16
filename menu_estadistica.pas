@@ -2,7 +2,7 @@ unit Menu_Estadistica;
 interface
 
 uses
-SysUtils, crt, Estadisticas, Arch_Infracciones, Arch_Conductores, Estilo;
+SysUtils, crt, Estadisticas, Arch_Infracciones, Arch_Conductores, Estilo, Conductores, Infracciones;
 
 procedure menu_estadisticas(var archConductores:T_ArchConductores; var archInfracciones:T_ArchInfracciones);
 

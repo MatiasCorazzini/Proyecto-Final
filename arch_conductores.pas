@@ -36,12 +36,6 @@ type
   Procedure AbrirConductores(var arch:T_ArchConductores);
   Procedure CerrarConductores(var arch:T_ArchConductores);
 
-  Function TamConductores(var arch:T_ArchConductores):Integer;
-
-  Function LeerConductor(var arch:T_ArchConductores; pos:Integer):T_Conductores; //
-  Procedure GuardarConductor(var arch:T_ArchConductores; pos:Integer; X:T_Conductores);
-
-
 implementation
 
   Procedure CrearConductores(var arch:T_ArchConductores);
@@ -65,23 +59,6 @@ implementation
   Procedure CerrarConductores(var arch:T_ArchConductores);
   begin
     Close(arch);
-  end;
-
-  Function TamConductores(var arch:T_ArchConductores):Integer;
-  begin
-    TamConductores:= Filesize(arch);
-  end;
-
-  Function LeerConductor(var arch:T_ArchConductores; pos:Integer):T_Conductores; //
-  begin
-    Seek(arch, pos);
-    Read(arch, LeerConductor);
-  end;
-
-  Procedure GuardarConductor(var arch:T_ArchConductores; pos:Integer; X:T_Conductores);
-  begin
-    Seek(arch, pos);
-    Write(arch, X);
   end;
 end.
 

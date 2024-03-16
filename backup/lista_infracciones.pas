@@ -5,7 +5,7 @@ unit Lista_Infracciones;
 interface
 
 uses
-  SysUtils, crt, Arch_Infracciones, Arch_Conductores, ArbolConductores, Validadores, Estilo;
+  SysUtils, crt, Arch_Infracciones, Arch_Conductores, ArbolConductores, Validadores, Estilo, Conductores, Infracciones;
 
 type
   T_Dato = T_Infracciones;
@@ -301,7 +301,7 @@ implementation
      end
      else
      begin
-       Writeln('No se encontro ese conductor.')
+       Writeln('No se encontro ese conductor.');
      end;
      readkey;
      CerrarConductores(archConductores);

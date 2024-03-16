@@ -3,7 +3,7 @@ unit Menu_Listados;
 interface
 
 uses
-SysUtils,crt,Arch_Conductores,Arch_Infracciones, Lista_Conductores, Lista_Infracciones, ArbolConductores;
+SysUtils,crt,Arch_Conductores,Arch_Infracciones, Lista_Conductores, Lista_Infracciones, ArbolConductores, Lista_ConductoresA;
 
 procedure Menu_list(var archConductores:T_ArchConductores; var archInfracciones:T_ArchInfracciones; arbol:T_Arbol);
 
@@ -14,12 +14,12 @@ procedure Menu_list(var archConductores:T_ArchConductores; var archInfracciones:
 var
 op_list:integer;
 listaInfracciones:T_ListaInfracciones;
-listaConductores:T_ListaConductores;
+L:T_Arbol;
 
 begin
   op_list:=-1;
   AbrirConductores(archConductores);
-    CrearListaConductores(listaConductores, archConductores);
+    CrearListaConductoresA(L, archConductores);
   CerrarConductores(archConductores);
 
   AbrirInfracciones(archInfracciones);
@@ -46,10 +46,10 @@ while op_list <> 0 do
   readln(op_list);
   clrscr();
     case op_list of
-     1: ImprimirListaConductores(listaConductores, False);
+     1: ImprimirListaConductoresA(L, False, archConductores);
      2: ListaInfraccionesPeriodo(listaInfracciones);
      3: ListaInfraccionesConductor(listaInfracciones, archConductores, arbol);
-     4: ImprimirListaConductores(listaConductores, True);
+     4: ImprimirListaConductoresA(L, True, archConductores);
     end;
   end;
 
