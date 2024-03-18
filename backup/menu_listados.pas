@@ -14,13 +14,11 @@ procedure Menu_list(var archConductores:T_ArchConductores; var archInfracciones:
 var
 op_list:integer;
 listaInfracciones:T_ListaInfracciones;
-listaConductores:T_ListaConductores;
 L:T_Arbol;
 
 begin
   op_list:=-1;
   AbrirConductores(archConductores);
-    CrearListaConductores(listaConductores, archConductores);
     CrearListaConductoresA(L, archConductores);
   CerrarConductores(archConductores);
 
@@ -54,10 +52,6 @@ while op_list <> 0 do
      4: ImprimirListaConductoresA(L, True, archConductores);
     end;
   end;
-
- AbrirConductores(archConductores);
-    EliminarListaConductores(listaConductores);
- CerrarConductores(archConductores);
 
  AbrirInfracciones(archInfracciones);
     EliminarListaInfracciones(listaInfracciones);

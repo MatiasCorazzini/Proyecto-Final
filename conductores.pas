@@ -62,7 +62,7 @@ if pos <> -1 then
    begin
    repeat
       clrscr();
-      Writeln('¿Decea dar de alta nuevamente?');
+      Writeln('Desea dar de alta nuevamente?');
       Writeln(' 1-SI   0-NO');
       readln(op);
       if op = '1' then
@@ -90,7 +90,7 @@ else
  write('Mail: ');
  readln(X.mail);
  AgregarConductor(arch, arbol, X);
- Writeln('Se dio de alta exisotamente');
+ Writeln('Se dio de alta exisotamente.');
  end;
 end
  else Writeln('Ese dni ya existe.');
@@ -107,14 +107,22 @@ end;
    if pos <> -1 then
     begin
       X:=LeerConductor(arch, pos);
+      //GotoXY( 30, 10 );
       writeln('-----------------------------------');
+      GotoXY( 30, 12 );
       writeln('DNI:                   ', X.dni);
+      GotoXY( 30, 13 );
       writeln('Nombre y Apellido:     ', X.apynom);
+      GotoXY( 30, 14 );
       writeln('Fecha de Nacimiendo:   ', X.fecha_nacimiento);
+      GotoXY( 30, 15 );
       writeln('Telefono:              ', X.telefono);
+      GotoXY( 30, 16 );
       writeln('Mail:                  ', X.mail);
+      GotoXY( 30, 17 );
       writeln('Scoring:               ', X.scoring);
 
+      GotoXY( 30, 18 );
       if X.Habilitado then
        begin
          write('Habilitado:');
@@ -129,11 +137,10 @@ end;
       end;
       CambiarTexto();
 
-      if not(X.Habilitado) then
-            writeln('Fecha de inhabilitado: ', X.fecha_habilitado);
-
+      GotoXY( 30, 19 );
       writeln('Reincidencias:         ', X.cantidad_reincidencias);
 
+      GotoXY( 30, 20 );
       if X.Activo then
       begin
          write('Activo:');
@@ -148,7 +155,11 @@ end;
       end;
       CambiarTexto();
 
-      readkey();
+      GotoXY( 30, 21 );
+      if not(X.Habilitado) then
+            writeln('Fecha de inhabilitado: ', X.fecha_habilitado);
+      GotoXY( 30, 23 );
+
     end
    else
    begin
@@ -195,7 +206,7 @@ end;
       pos:= BuscarArbol(arbol, dni);
       op:= '-1';
       repeat
-        Writeln('¿Decea dar de baja?');
+        Writeln('Desea dar de baja?');
         Writeln('1-Si    0-No');
         readln(op);
 
@@ -318,7 +329,7 @@ end;
 
        writeln('');
        }
-       writeln('Decea guardar cambios? 1-SI   0-NO');
+       writeln('Desea guardar cambios? 1-SI   0-NO');
        readln(op);
 
        if op = '1' then

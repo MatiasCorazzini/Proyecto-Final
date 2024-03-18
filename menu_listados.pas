@@ -53,10 +53,6 @@ while op_list <> 0 do
     end;
   end;
 
- AbrirConductores(archConductores);
-    EliminarListaConductores(listaConductores);
- CerrarConductores(archConductores);
-
  AbrirInfracciones(archInfracciones);
     EliminarListaInfracciones(listaInfracciones);
  CerrarInfracciones(archInfracciones);

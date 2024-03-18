@@ -35,7 +35,7 @@ begin
     if pos <> -1 then X:= LeerConductor(archConductores, pos);
     clrscr();
     GotoXY( 30, 8 );
-    writeln('--------------------');
+    writeln('-----------------------------------');
     GotoXY( 30, 9 );
     writeln('MENU DE CONDUCTORES: ');
     GotoXY( 30, 10 );
@@ -50,35 +50,21 @@ begin
       end
     else
     begin
-      write(X.apynom, ': ');
-      if X.habilitado then
-      begin
-        TextColor( Green );
-        Write('Habilitado');
-      end
-      else
-      begin
-        TextColor( Red );
-        Write('Inhabilitado');
-      end;
+      ConsultarConductor(archConductores, arbol, DNI);
 
-      CambiarTexto();
-
-      GotoXY(30, 11);
+      GotoXY( 35, 23 );
       writeln('1-Modificacion');
-      GotoXY( 30, 12);
-      writeln('2-Consulta');
-      GotoXY( 30, 13 );
-      writeln('3-Baja');
+      GotoXY( 35, 24);
+      writeln('2-Baja');
       if X.Habilitado = false then
       begin
-        GotoXY( 30, 14 );
-        writeln('4-Habilitar');
-        GotoXY(30,15);
+        GotoXY( 35, 25 );
+        writeln('3-Habilitar');
+        GotoXY(35,26);
       end
       else
       begin
-        GotoXY(30,14);
+        GotoXY(35,25);
       end;
       writeln('0-Salir');
     end;
@@ -89,7 +75,6 @@ begin
            if (pos = -1) or not(X.activo) then
            begin
              AltaConductor(archConductores, arbol, DNI);
-             op:='0';
            end
            else
            begin
@@ -97,14 +82,9 @@ begin
            end;
           end;
 
-      '2':if pos <> -1 then ConsultarConductor(archConductores, arbol, DNI);
+      '2':if pos <> -1 then BajaConductor(archConductores, arbol, DNI);
 
       '3':begin
-          if pos <> -1 then BajaConductor(archConductores, arbol, DNI); // anda :D
-          op:='0';
-          end;
-
-      '4':begin
             if pos <> -1 then
             begin
               curso:= '-1';

@@ -8,7 +8,6 @@ uses
   Procedure ConsultarInfraccion(var arch:T_ArchInfracciones);
   Procedure AltaInfracciones(var archInf:T_ArchInfracciones; var archCond:T_ArchConductores; arbol:T_Arbol);
 
-  Procedure RecorrerInfracciones(var arch:T_ArchInfracciones);
   Procedure MostrarInfraccion(X:T_Infracciones);
 
   Function TamInfracciones(var arch:T_ArchInfracciones):Integer;
