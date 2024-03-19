@@ -64,7 +64,7 @@ begin
       end
       else
       begin
-        GotoXY(35,27);
+        GotoXY(35,25);
       end;
       writeln('0-Salir');
     end;

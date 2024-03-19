@@ -3,7 +3,7 @@ unit Infracciones;
 interface
 
 uses
-  SysUtils, crt, Arch_Infracciones, ArbolConductores, Arch_Conductores, Conductores, Scoring, Validadores;
+  SysUtils, crt, Arch_Infracciones, ArbolConductores, Arch_Conductores, Conductores, Validadores;
 
   Procedure ConsultarInfraccion(var arch:T_ArchInfracciones);
   Procedure AltaInfracciones(var archInf:T_ArchInfracciones; var archCond:T_ArchConductores; arbol:T_Arbol);
@@ -46,7 +46,7 @@ implementation
 
   Procedure AltaInfracciones(var archInf:T_ArchInfracciones; var archCond:T_ArchConductores; arbol:T_Arbol);
   var
-    op, fecha:String;
+    op{, fecha}:String;
     tam:Integer;
     puntos:Byte;
     dni:T_Dni;
@@ -135,7 +135,7 @@ implementation
                end;
         end;
       until puntos <> 0;
-
+      {
       repeat
       write('Fecha de infraccion: ');
       readln(fecha);
@@ -143,6 +143,7 @@ implementation
       if not(valFecha(fecha)) then writeln('Fecha invalida.');
       until valFecha(fecha);
       X.fecha_infraccion:=fecha;
+      }
 
       X.tipo_infraccion:= tipo;
       X.puntos_descontar:=puntos;
@@ -158,7 +159,7 @@ implementation
       CerrarConductores(archCond);
 
       AbrirInfracciones(archInf);
-      writeln('Tamano de archivo: ', TamInfracciones(archInf));
+      //writeln('Tamano de archivo: ', TamInfracciones(archInf));
       readkey;
   end;
 

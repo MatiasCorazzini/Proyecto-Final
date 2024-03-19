@@ -46,7 +46,11 @@ else
     repeat
     Write('DNI: ');
     readln(dni2);
-    if not(valDni(dni2)) then writeln('DNI no valido.');
+    if not(valDni(dni2)) then
+    begin
+      clrscr();
+      writeln('DNI no valido.');
+    end;
     until valDni(dni2);
 
     X.dni:=dni2;
@@ -62,7 +66,7 @@ if pos <> -1 then
    begin
    repeat
       clrscr();
-      Writeln('¿Desea dar de alta nuevamente?');
+      Writeln('Desea dar de alta nuevamente?');
       Writeln(' 1-SI   0-NO');
       readln(op);
       if op = '1' then
@@ -82,7 +86,11 @@ else
   repeat
   write('Fecha de Nacimiendo: ');
   readln(fecha);
-  if not(valFecha(fecha)) then writeln('Fecha invalida.');
+  if not(valFecha(fecha)) then
+    begin
+       clrscr();
+       writeln('Fecha invalida.');
+    end;
   until valFecha(fecha);
  X.fecha_nacimiento:=fecha;
  write('Tel: ');
@@ -163,6 +171,7 @@ end;
     end
    else
    begin
+      GotoXY( 30, 12 );
       Writeln('Conductor no encontrado...');
    end;
   end;
@@ -194,7 +203,7 @@ end;
       GuardarConductor(arch, tam, X);
       InsertarConductor(arbol, arch, X);
 
-      writeln('Tamano de archivo: ', TamConductores(arch));
+      //writeln('Tamano de archivo: ', TamConductores(arch));
   end;
 
   Procedure BajaConductor(var arch:T_ArchConductores; arbol:T_Arbol; dni:T_Dni);
@@ -206,7 +215,7 @@ end;
       pos:= BuscarArbol(arbol, dni);
       op:= '-1';
       repeat
-        Writeln('¿Desea dar de baja?');
+        Writeln('Desea dar de baja?');
         Writeln('1-Si    0-No');
         readln(op);
 
@@ -303,34 +312,18 @@ end;
                 end;
          end;
       end;
+
       clrscr();
        op:='-1';
-       {
-       {-----------------------------------------------------------}
-       if aux1 = X.apynom then
-          Writeln('    ', X.apynom )
+       if (aux1 <> X.apynom) or (aux2 <> X.fecha_nacimiento) or (aux3 <> X.telefono) or (aux4 <> X.mail) then
+       begin
+         writeln('Desea guardar cambios? 1-SI   0-NO');
+         readln(op);
+       end
        else
-          Writeln('    Nuevo apellido y nombre:   ', X.apynom);
-       {-----------------------------------------------------------}
-       if aux2 = X.fecha_nacimiento then
-          writeln('    ',X.fecha_nacimiento)
-       else
-          writeln('    Nueva fecha de nacimiento: ',aux2);
-       {-----------------------------------------------------------}
-       if aux3 = X.telefono then
-          writeln('    ',X.telefono)
-       else
-          writeln('    Nuevo tel: ', aux3);
-       {-----------------------------------------------------------}
-       if aux4 = X.mail then
-          writeln('    ',X.mail)
-       else
-          writeln('    Nuevo mail: ', aux4);
-
-       writeln('');
-       }
-       writeln('Desea guardar cambios? 1-SI   0-NO');
-       readln(op);
+       begin
+        op:='0';
+       end;
 
        if op = '1' then
        begin

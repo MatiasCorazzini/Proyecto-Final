@@ -22,11 +22,6 @@ type
   Procedure AbrirInfracciones(var arch:T_ArchInfracciones);
   Procedure CerrarInfracciones(var arch:T_ArchInfracciones);
 
-  Function TamInfracciones(var arch:T_ArchInfracciones):Integer;
-
-  Function LeerInfraccion(var arch:T_ArchInfracciones; pos:Integer):T_Infracciones;
-  Procedure GuardarInfraccion(var arch:T_ArchInfracciones; pos:Integer; X:T_Infracciones);
-
 implementation
 
   Procedure CrearInfracciones(var arch:T_ArchInfracciones);

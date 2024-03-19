@@ -1,7 +1,7 @@
 unit Estadisticas;
 interface
 uses
-SysUtils, crt, Arch_Infracciones, Arch_Conductores, Validadores, Conductores;
+SysUtils, crt, Arch_Infracciones, Arch_Conductores, Validadores, Conductores, Infracciones;
 
 procedure infracciones_fechas(var arch_infracciones:T_ArchInfracciones);
 function porcent_reincidencias(var arch_conductores:T_ArchConductores):Real;
@@ -41,12 +41,18 @@ implementation
       if valFecha(hasta) then
       begin
          if StrToDate(hasta) >= StrToDate(desde) then
-            flag:= True
+         begin
+            flag:= True;:
+         end
          else
+         begin
+            clrscr();
             Writeln('La fecha debe ser posterior o bien igual a la anterior.');
+         end;
       end
       else
       begin
+        clrscr();
         Writeln('Fecha invalida.');
       end;
     until flag;

@@ -7,9 +7,6 @@ interface
 uses
   SysUtils, DateUtils, crt, ArbolConductores, Arch_Conductores, Arch_Infracciones, Conductores;
 
-  Procedure ActualizarScoring(var arch:T_ArchConductores; var arch2:T_ArchInfracciones; var arbol:T_Arbol; x1:T_Infracciones);
-  Function UltimaInfraccion(var arch:T_ArchInfracciones; dni:T_Dni):T_Infracciones;
-
   Procedure Reinsidencia(var archConductores:T_ArchConductores; arbol:T_Arbol; dni:T_Dni);
 
 implementation
@@ -37,7 +34,7 @@ implementation
                   GuardarConductor(archConductores, pos, X);
 
                   Writeln('Reinsidencia Nro ', X.cantidad_reincidencias, '.');
-                  Writeln('La fecha de inhavilitacion fue el: ', X.fecha_habilitado);
+                  Writeln('La fecha de inhabilitacion fue el: ', X.fecha_habilitado);
                   Writeln('Pasaron ', dias,' dias.');
                   Writeln('');
 

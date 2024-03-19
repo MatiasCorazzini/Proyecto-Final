@@ -42,7 +42,7 @@ implementation
   begin
     Assign(arch, rutaconductores);
     rewrite(arch);
-    writeln('     Archivo "conductores" creado');
+    //writeln('     Archivo "conductores" creado');
   end;
 
   Procedure AbrirConductores(var arch:T_ArchConductores);

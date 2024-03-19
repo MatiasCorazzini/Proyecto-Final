@@ -28,7 +28,7 @@ implementation
   begin
     Assign(arch, rutainfracciones);
     rewrite(arch);
-    writeln('     Archivo "infracciones" creado');
+    //writeln('     Archivo "infracciones" creado');
   end;
 
   Procedure AbrirInfracciones(var arch:T_ArchInfracciones);

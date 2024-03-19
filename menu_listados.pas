@@ -3,7 +3,7 @@ unit Menu_Listados;
 interface
 
 uses
-SysUtils,crt,Arch_Conductores,Arch_Infracciones, Lista_Conductores, Lista_Infracciones, ArbolConductores, Lista_ConductoresA;
+SysUtils,crt,Arch_Conductores,Arch_Infracciones, Lista_Infracciones, ArbolConductores, Lista_ConductoresA;
 
 procedure Menu_list(var archConductores:T_ArchConductores; var archInfracciones:T_ArchInfracciones; arbol:T_Arbol);
 

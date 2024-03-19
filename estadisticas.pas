@@ -41,12 +41,18 @@ implementation
       if valFecha(hasta) then
       begin
          if StrToDate(hasta) >= StrToDate(desde) then
-            flag:= True
+         begin
+            flag:= True;
+         end
          else
+         begin
+            clrscr();
             Writeln('La fecha debe ser posterior o bien igual a la anterior.');
+         end;
       end
       else
       begin
+        clrscr();
         Writeln('Fecha invalida.');
       end;
     until flag;

@@ -34,7 +34,7 @@ implementation
                   GuardarConductor(archConductores, pos, X);
 
                   Writeln('Reinsidencia Nro ', X.cantidad_reincidencias, '.');
-                  Writeln('La fecha de inhavilitacion fue el: ', X.fecha_habilitado);
+                  Writeln('La fecha de inhabilitacion fue el: ', X.fecha_habilitado);
                   Writeln('Pasaron ', dias,' dias.');
                   Writeln('');
 
@@ -57,7 +57,7 @@ implementation
                     GuardarConductor(archConductores, pos, X);
 
                     Writeln('Reinsidencia N°', X.cantidad_reincidencias, '.');
-                    Writeln('La fecha de inhavilitacion fue el: ', X.fecha_habilitado);
+                    Writeln('La fecha de inhabilitacion fue el: ', X.fecha_habilitado);
                     Writeln('Pasaron ', dias,'.');
                     Writeln('');
 
@@ -80,7 +80,7 @@ implementation
                     GuardarConductor(archConductores, pos, X);
 
                     Writeln('Reinsidencia N°', X.cantidad_reincidencias, '.');
-                    Writeln('La fecha de inhavilitacion fue el: ', X.fecha_habilitado);
+                    Writeln('La fecha de inhabilitacion fue el: ', X.fecha_habilitado);
                     Writeln('Pasaron ', dias,' dias.');
                     Writeln('');
 
@@ -104,7 +104,7 @@ implementation
                 GuardarConductor(archConductores, pos, X);
 
                 Writeln('Reinsidencia N°', X.cantidad_reincidencias, '.');
-                Writeln('La fecha de inhavilitacion fue el: ', X.fecha_habilitado);
+                Writeln('La fecha de inhabilitacion fue el: ', X.fecha_habilitado);
                 Writeln('Pasaron ', dias,' dias.');
                 Writeln('');
 

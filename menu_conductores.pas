@@ -90,7 +90,7 @@ begin
               curso:= '-1';
                repeat
                  clrscr();
-                 writeln('¿Realizo el curso de reavilitacion?');
+                 writeln('Realizo el curso de reavilitacion?');
                  writeln('1-Si  0-No');
                  readln(curso);
 

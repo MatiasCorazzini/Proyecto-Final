@@ -55,7 +55,7 @@ implementation
       end;
     end;
 
-    writeln('Lista de "infracciones" creada...')
+    //writeln('Lista de "infracciones" creada...')
   end;
 
   procedure AgregarLista(var L:T_ListaInfracciones; X:T_Dato);
@@ -163,7 +163,7 @@ implementation
       inc(counter);
     end;
 
-    writeln(counter, ' elementos eliminados de la lista.');
+    //writeln(counter, ' elementos eliminados de la lista.');
   end;
 
   procedure ImprimirCabeceraTabla;
