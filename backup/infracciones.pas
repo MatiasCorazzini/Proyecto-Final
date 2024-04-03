@@ -159,7 +159,7 @@ implementation
       CerrarConductores(archCond);
 
       AbrirInfracciones(archInf);
-      writeln('Tamano de archivo: ', TamInfracciones(archInf));
+      //writeln('Tamano de archivo: ', TamInfracciones(archInf));
       readkey;
   end;
 

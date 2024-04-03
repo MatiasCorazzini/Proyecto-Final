@@ -55,7 +55,7 @@ implementation
       end;
     end;
 
-    writeln('Lista de "infracciones" creada...')
+    //writeln('Lista de "infracciones" creada...')
   end;
 
   procedure AgregarLista(var L:T_ListaInfracciones; X:T_Dato);
@@ -163,7 +163,7 @@ implementation
       inc(counter);
     end;
 
-    writeln(counter, ' elementos eliminados de la lista.');
+    //writeln(counter, ' elementos eliminados de la lista.');
   end;
 
   procedure ImprimirCabeceraTabla;
@@ -211,7 +211,11 @@ implementation
       write('Desde: ');
       readln(desde);
 
-      if not(valFecha(desde)) then writeln('Fecha invalida.');
+      if not(valFecha(desde)) then
+      begin
+        clrscr();
+        writeln('Fecha invalida.');
+      end;
     until valFecha(desde);
 
     clrscr();
@@ -223,6 +227,7 @@ implementation
 
       if valFecha(hasta) then
       begin
+        clrscr();
          if StrToDate(hasta) >= StrToDate(desde) then
             flag:= True
          else
@@ -230,11 +235,11 @@ implementation
       end
       else
       begin
+        clrscr();
         Writeln('Fecha invalida.');
       end;
     until flag;
 
-    clrscr();
     Writeln('[ ',desde, ' - ', hasta, ' ]');
 
     ImprimirCabeceraTabla;
@@ -252,7 +257,11 @@ implementation
     repeat
        Write('DNI: ');
        readln(dni);
-       if not(valDni(dni)) then writeln('DNI no valido.');
+       if not(valDni(dni)) then
+       begin
+         clrscr();
+         writeln('DNI no valido.');
+       end;
      until valDni(dni);
 
      pos:= BuscarArbol(arbol, dni);

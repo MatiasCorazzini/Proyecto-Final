@@ -1,7 +1,5 @@
 unit Scoring;
 
-{$mode ObjFPC}{$H+}
-
 interface
 
 uses

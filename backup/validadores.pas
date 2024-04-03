@@ -23,7 +23,7 @@ begin
   EsNumero := False;
   for i := 1 to Length(valor) do
   begin
-    if not (valor[i] in ['0', '1', '2', '3','4','5','6','7','8','9']) then
+    if not (valor[i] in ['0'..'9']) then
     begin
       Exit;
     end;

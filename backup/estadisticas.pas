@@ -1,5 +1,7 @@
 unit Estadisticas;
+
 interface
+
 uses
 SysUtils, crt, Arch_Infracciones, Arch_Conductores, Validadores, Conductores, Infracciones;
 
@@ -42,7 +44,7 @@ implementation
       begin
          if StrToDate(hasta) >= StrToDate(desde) then
          begin
-            flag:= True;:
+            flag:= True;
          end
          else
          begin

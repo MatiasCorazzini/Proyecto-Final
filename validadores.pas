@@ -1,6 +1,7 @@
 unit Validadores;
 
 interface
+
  uses crt,SysUtils,Classes;
 
  function valDni(dni:string):boolean;

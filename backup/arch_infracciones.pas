@@ -6,7 +6,7 @@ uses
 SysUtils, crt;
 
 const
-  rutainfracciones = 'C:\archivos_scoring\infracciones.dat';
+  rutainfracciones = 'C:\Users\nahue\OneDrive\Escritorio\archivos_scoring\infracciones.dat';
 
 type
   T_Infracciones = Record
@@ -28,7 +28,7 @@ implementation
   begin
     Assign(arch, rutainfracciones);
     rewrite(arch);
-    writeln('     Archivo "infracciones" creado');
+    //writeln('     Archivo "infracciones" creado');
   end;
 
   Procedure AbrirInfracciones(var arch:T_ArchInfracciones);

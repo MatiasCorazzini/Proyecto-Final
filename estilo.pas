@@ -3,7 +3,7 @@ unit Estilo;
 interface
 
 uses
-  Classes, SysUtils, crt;
+  SysUtils, crt;
 
 Procedure CambiarFondo();
 Procedure CambiarTexto();

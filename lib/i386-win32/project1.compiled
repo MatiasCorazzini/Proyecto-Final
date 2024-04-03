@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
   <Compiler Value="C:\lazarus\fpc\3.2.2\bin\i386-win32\fpc.exe" Date="1449426723"/>
-  <Params Value=" -MObjFPC -Scghi -O1 -gw2 -godwarfsets -gl -l -vewnhibq -FiC:\Users\matia\Documents\Lazarus\Proyecto-Final-main\lib\i386-win32 -FuC:\Users\matia\Documents\Lazarus\Proyecto-Final-main\ -FUC:\Users\matia\Documents\Lazarus\Proyecto-Final-main\lib\i386-win32\ -FEC:\Users\matia\Documents\Lazarus\Proyecto-Final-main\ -oC:\Users\matia\Documents\Lazarus\Proyecto-Final-main\project1.exe project1.lpr"/>
+  <Params Value=" -MObjFPC -Scghi -O1 -gw2 -godwarfsets -gl -l -vewnhibq -FiC:\Users\matia\Documents\Lazarus\Proyecto-Final\lib\i386-win32 -FuC:\Users\matia\Documents\Lazarus\Proyecto-Final\ -FUC:\Users\matia\Documents\Lazarus\Proyecto-Final\lib\i386-win32\ -FEC:\Users\matia\Documents\Lazarus\Proyecto-Final\ -oC:\Users\matia\Documents\Lazarus\Proyecto-Final\project1.exe project1.lpr"/>
 </CONFIG>

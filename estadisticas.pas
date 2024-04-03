@@ -1,5 +1,7 @@
 unit Estadisticas;
+
 interface
+
 uses
 SysUtils, crt, Arch_Infracciones, Arch_Conductores, Validadores, Conductores, Infracciones;
 
@@ -28,7 +30,11 @@ implementation
       write('Desde: ');
       readln(desde);
 
-      if not(valFecha(desde)) then writeln('Fecha invalida.');
+      if not(valFecha(desde)) then
+      begin
+        clrscr();
+        writeln('Fecha invalida.');
+      end;
     until valFecha(desde);
 
     clrscr();

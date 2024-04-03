@@ -60,7 +60,11 @@ implementation
       repeat
          write('DNI: ');
          readln(dni);
-         if not(valDni(dni))then writeln('DNI no valido.');
+         if not(valDni(dni))then
+         begin
+           clrscr();
+           writeln('DNI no valido.');
+         end;
       until valDni(dni);
 
       if BuscarArbol(arbol, dni) = -1 then
